@@ -1,0 +1,121 @@
+
+/*TUTAJ BĘDĄ STYLE W HEADERZE*/
+header {
+    background-color: black;
+    max-width: 1200px;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    position: sticky;
+
+}
+header li {
+    margin: 5px;
+}
+ul.navigation__bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 30px;
+}
+.navigation__bar li {
+
+}
+/* TUTAJ BĘDĄ STYLE DLA BODY*/
+body {
+    background-image: url("../images/background.jpeg");
+    background-color: black;
+    background-repeat: none;
+    color: white;
+    text-shadow: 1px 1px #000, 1px -1px #000, -1px 1px #000, -1px -1px #000;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+body h1 {
+    font-size: 30px;
+    text-align: center;
+}
+body h2 {
+    font-size: 25px;
+    margin-left: 15px;
+}
+body p {
+    max-width: 500px;
+    margin: 30px 15px;
+}
+footer {
+    background-color: black;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+/* STYLE DLA COLLECTORS */
+.collectorsUl {
+    display: flex;
+}
+.collectorsUl li {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+.collectorsUl li {
+
+}
+.collectors img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-size: center;
+}
+/*STYLE DLA COLLECTIONS*/
+
+.colUl {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.colUl li {
+    margin: 10px;
+}
+.itemList {
+    display: block;
+}
+.itemListHidden {
+    display: none;
+}
+.colNormal div {
+    height: 200px;
+    width: 200px;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 10px;
+}
+.colNormal div h3 {
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 10px;
+
+}
+.colBig div {
+    width: 100vw;
+    background-color: rgba(0,0,0,0.3);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.colBig div h3 {
+    margin: 0 auto;
+    font-size: 30px;
+    height: 20px;
+    display: inline-block;
+}
+.colBig div p {
+    height: 30px;
+}

@@ -1,0 +1,129 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Smiatu",
+      "description": "Założyciel strony, zbieracz wszelakiego szmelcu: CD, książki, karty, złom.",
+      "avatar": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/428668_576188765748659_1282475711_n.jpg?_nc_cat=0&oh=c809e020a8234a33d6b543bc4255052d&oe=5C300BAD"
+    },
+    {
+      "id": 2,
+      "name": "Klempos",
+      "description": "Nowe wcielenie Hulka Hogana",
+      "avatar": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/13906772_10209997924214298_7681913732972065605_n.jpg?_nc_cat=0&oh=9253a6fe2df3e11cf186e15333e37d08&oe=5C375612"
+    },
+    {
+      "id": 3,
+      "name": "Zibi",
+      "description": "Punk na 100 000 000% !!!",
+      "avatar": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/29683641_2080884718593782_447062339742173117_n.jpg?_nc_cat=0&oh=3d3bdd024e20e57869be4ca5d93b9923&oe=5BF27726"
+    }
+  ],
+  "collections": [
+    {
+      "id": 0,
+      "colName": "Kolekcja płyt CD",
+      "author": "Smiatu",
+      "data": [
+        {
+          "name": "Our Mother The Mountain",
+          "author": "Zandt, Townes Van",
+          "image": "https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F4d26835c503c18e86c773dfccb5dc72d.500x500x1.jpg",
+          "date": 1969,
+          "tags": ["country", "outlaw"]
+        },
+        {
+          "name": "Our Mother The Mountain",
+          "author": "Zandt, Townes Van",
+          "image": "https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F4d26835c503c18e86c773dfccb5dc72d.500x500x1.jpg",
+          "date": 1969,
+          "tags": ["country", "outlaw"]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "colName": "Kolekcja gruzu",
+      "author": "Smiatu",
+      "data": [
+        {
+          "name": "Our Mother The Mountain",
+          "author": "Zandt, Townes Van",
+          "image": "https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F4d26835c503c18e86c773dfccb5dc72d.500x500x1.jpg",
+          "date": 1969,
+          "tags": ["country", "outlaw"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "colName": "Kolekcja gruzu",
+      "author": "Smiatu",
+      "data": [
+        {
+          "name": "Our Mother The Mountain",
+          "author": "Zandt, Townes Van",
+          "image": "https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F4d26835c503c18e86c773dfccb5dc72d.500x500x1.jpg",
+          "date": 1969,
+          "tags": ["country", "outlaw"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "colName": "Kolekcja gruzu",
+      "author": "Smiatu",
+      "data": [
+        {
+          "name": "Our Mother The Mountain",
+          "author": "Zandt, Townes Van",
+          "image": "https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F4d26835c503c18e86c773dfccb5dc72d.500x500x1.jpg",
+          "date": 1969,
+          "tags": ["country", "outlaw"]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "colName": "Kolekcja gruzu",
+      "author": "Smiatu",
+      "data": [
+        {
+          "name": "Our Mother The Mountain",
+          "author": "Zandt, Townes Van",
+          "image": "https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F4d26835c503c18e86c773dfccb5dc72d.500x500x1.jpg",
+          "date": 1969,
+          "tags": ["country", "outlaw"]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "colName": "Kolekcja gruzu",
+      "author": "Smiatu",
+      "data": [
+        {
+          "name": "Our Mother The Mountain",
+          "author": "Zandt, Townes Van",
+          "image": "https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F4d26835c503c18e86c773dfccb5dc72d.500x500x1.jpg",
+          "date": 1969,
+          "tags": ["country", "outlaw"]
+        }
+      ]
+    }
+  ]
+}

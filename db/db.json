@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Never Mind The Bollocks",
+      "author": "Sex Pistols"
+      "image": ,
+      "tags": ["punk", "rock"],
+      "date": "1977",
+    },
+    {
+      "id": 2,
+      "name": "Model S",
+      "brand": "Tesla"
+    },
+    {
+      "id": 3,
+      "name": "Polonez Caro",
+      "brand": "Daewoo"
+    },
+    {
+      "id": 4,
+      "name": "i3",
+      "brand": "BMW"
+    },
+    {
+      "id": 5,
+      "name": "X6 M",
+      "brand": "BMW"
+    },
+    {
+      "id": 6,
+      "name": "Model X",
+      "brand": "Tesla"
+    },
+    {
+      "id": 7,
+      "name": "Matiz",
+      "brand": "Daewoo"
+    },
+    {
+      "id": 8,
+      "name": "XF",
+      "brand": "Jaguar"
+    },
+    {
+      "id": 9,
+      "name": "RX-7",
+      "brand": "Mazda"
+    },
+    {
+      "id": 10,
+      "name": "Model 3",
+      "brand": "Tesla"
+    },
+    {
+      "id": 11,
+      "name": "Celica",
+      "brand": "Toyota"
+    },
+    {
+      "id": 12,
+      "name": "Tico",
+      "brand": "Daewoo"
+    },
+    {
+      "id": 13,
+      "name": "Roadster",
+      "brand": "Tesla"
+    },
+    {
+      "id": 14,
+      "name": "Supra",
+      "brand": "Toyota"
+    },
+    {
+      "id": 15,
+      "name": "i8",
+      "brand": "BMW"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Smiatu",
+      "description": "Założyciel strony, zbieracz wszelakiego szmelcu: CD, książki, karty, złom.",
+      "avatar": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/428668_576188765748659_1282475711_n.jpg?_nc_cat=0&oh=c809e020a8234a33d6b543bc4255052d&oe=5C300BAD"
+    },
+    {
+      "id": 2,
+      "name": "Klempos",
+      "description": "Nowe wcielenie Hulka Hogana",
+      "avatar": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/428668_576188765748659_1282475711_n.jpg?_nc_cat=0&oh=c809e020a8234a33d6b543bc4255052d&oe=5C300BAD"
+    },
+  ]
+}
