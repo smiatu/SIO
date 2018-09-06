@@ -75,9 +75,9 @@ document.addEventListener("DOMContentLoaded", function(){
             const list = this.state.users.map( i =>
                 <li key={i.id} className={"collectors"}>
                     <NavLink to={"collectors/"+i.name}>
-                    <img src={i.avatar} />
-                    <h3>{i.name}</h3>
-                    <p>{i.description}</p>
+                        <img src={i.avatar} />
+                        <h3>{i.name}</h3>
+                        <p>{i.description}</p>
                     </NavLink>
                 </li>)
             return (
@@ -136,20 +136,18 @@ document.addEventListener("DOMContentLoaded", function(){
                                 <h3>{i.colName}</h3>
                                 <p>Właściciel: {i.author}</p>
                             </div>
-                            {/*<ScrollIntoViewIfNeeded active={active} elementType="span">*/}
-                                <ul className={this.state.itemView}>
-                                    {i.data.map(j =>
-                                        <li>
-                                            <img src={j.image} />
-                                            <br />
-                                            {j.author}
-                                            <br />
-                                            {j.name}
-                                            <br />
-                                            {j.date}
-                                        </li>)}
-                                </ul>
-                            {/*</ScrollIntoViewIfNeeded>*/}
+                            <ul className={this.state.itemView}>
+                                {i.data.map(j =>
+                                    <li>
+                                        <img src={j.image} />
+                                        <br />
+                                        {j.author}
+                                        <br />
+                                        {j.name}
+                                        <br />
+                                        {j.date}
+                                    </li>)}
+                            </ul>
                         </div>
                     </li>
                 )
@@ -232,25 +230,25 @@ document.addEventListener("DOMContentLoaded", function(){
 
             const list = this.state.collections.map( i =>
                 <li key={i.id} className={this.state.colView} onClick={this.renderCollection}>
-                     <div onClick={this.renderCollection} className="fullCol">
-                         <div>
+                    <div onClick={this.renderCollection} className="fullCol">
+                        <div>
                             <h3>{i.colName}</h3>
                             <p>Właściciel: {i.author}</p>
-                         </div>
-                         <ul className={this.state.itemView}>
-                             {i.data.map(j =>
-                                 <li>
-                                     <img src={j.image} />
-                                     <br />
-                                     {j.author}
-                                     <br />
-                                     {j.name}
-                                     <br />
-                                     {j.date}
-                                 </li>)}
-                         </ul>
-                     </div>
-                 </li>
+                        </div>
+                        <ul className={this.state.itemView}>
+                            {i.data.map(j =>
+                                <li>
+                                    <img src={j.image} />
+                                    <br />
+                                    {j.author}
+                                    <br />
+                                    {j.name}
+                                    <br />
+                                    {j.date}
+                                </li>)}
+                        </ul>
+                    </div>
+                </li>
             )
 
 
@@ -301,11 +299,11 @@ document.addEventListener("DOMContentLoaded", function(){
                 colName: "Nazwa kolekcji",
                 author: "Autor",
                 data: [],
-                name: 2,
-                artist: 3,
-                image: 4,
-                date: 5,
-                tags: 6,
+                name: "Nazwa przedmiotu",
+                artist: "Nazwa twórcy",
+                image: "url zdjęcia",
+                date: "data powstania",
+                tags: ["tagi"],
                 readyToSend: ``,
                 arrToSend: [],
                 // currentUser: this.props.currentUser,
@@ -328,6 +326,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         handleHeadClick = () => {
             console.log("klik");
+
             this.setState({
                 readyToSend: `{"id": ${this.state.id},
                 "colName": "${this.state.colName}",
@@ -346,14 +345,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 "colName": "${this.state.colName}",
                 "author": "${this.state.author}",
                 "data": [
-                    {
-                        "name": "${this.state.name}",
-                        "author": "${this.state.artist}",
-                        "image": "${this.state.image}",
-                        "date": ${this.state.date},
-                        "tags": [${this.state.tags}]
-                    }`],
-            })
+                    `],
+            });
         }
         handleChangeName = (e) => {
             this.setState({
@@ -381,14 +374,16 @@ document.addEventListener("DOMContentLoaded", function(){
             })
         }
         handleAddClick = () => {
+            const tagsFixer = "['" + this.state.tags.replace(/,/g, "', '") + "']";
             const nextItem = `
                     {
                         "name": "${this.state.name}",
                         "author": "${this.state.artist}",
                         "image": "${this.state.image}",
                         "date": ${this.state.date},
-                        "tags": [${this.state.tags}]
+                        "tags": ${tagsFixer}
                     }`;
+
             console.log(nextItem);
             const newArray = this.state.arrToSend;
             newArray.push(nextItem);
@@ -414,17 +409,15 @@ document.addEventListener("DOMContentLoaded", function(){
             });
         }
         render(){
-            // console.log("poszukiwanie curentusera" + this.props.currentUser);
             return (
-                <div>
+                <div className="collectionForm">
                     <div className="collectionHead">
                         Id: <input type="text" value={this.state.id} onChange={this.handleChangeId}/>
                         Nazwa kolekcji: <input type="text" value={this.state.colName} onChange={this.handleChangeColName}/>
                         Kolekcjoner: <input type="text" value={this.state.author} onChange={this.handleChangeAuthor}/>
                         <button onClick={this.handleHeadClick}>Stwórz input</button>
                     </div>
-                    <hr />
-                    <div>
+                    <div className="collectionBody">
                         Nazwa przedmiotu: <input type="text" value={this.state.name} onChange={this.handleChangeName}/>
                         Autor: <input type="text" value={this.state.artist} onChange={this.handleChangeArtist}/>
                         Url zdjęcia: <input type="text" value={this.state.image} onChange={this.handleChangeImage}/>
@@ -432,9 +425,10 @@ document.addEventListener("DOMContentLoaded", function(){
                         Tagi: <input type="text" value={this.state.tags} onChange={this.handleChangeTags}/>
                         <button onClick={this.handleAddClick}>Dodaj kolejny element</button>
                     </div>
-                    <hr />
                     <div>
-                        Podgląd arrToSend: <textarea type="text" value={this.state.arrToSend} className="toSend"/>
+                        <h3>Podgląd arrToSend:</h3>
+                        <textarea value={this.state.arrToSend} className="toSend"/>
+                        <br />
                         <button onClick={this.handleReady}>Kolekcja gotowa</button>
                     </div>
                 </div>
@@ -500,10 +494,10 @@ document.addEventListener("DOMContentLoaded", function(){
         render(){
             let loginWindow = null;
             if(this.state.currentUser) {
-                loginWindow = <h3>{this.state.currentUser}</h3>
+                loginWindow = <h3 className="login clearfix">{this.state.currentUser}</h3>
             } else {
                 loginWindow = (
-                    <div className="login">
+                    <div className="login clearfix">
                         <input type="text" value={this.state.userName} onChange={this.handleChangeUserName}/>
                         <input type="password" value={this.state.password} onChange={this.handleChangePassword}/>
                         <button onClick={this.handleLoginButton}>Zaloguj się</button>
@@ -551,4 +545,4 @@ document.addEventListener("DOMContentLoaded", function(){
         <App />,
         document.getElementById("app")
     )
-})
+});

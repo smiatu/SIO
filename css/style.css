@@ -159,6 +159,16 @@ a {
     height: 500px;
     width: 500px;
 }
+.collectionForm {
+    display: flex;
+    flex-wrap: wrap;
+}
+.collectionHead {
+    width: 210px;
+}
+.collectionBody {
+    width: 210px;
+}
 /*STYLE DLA FOOTER*/
 
 footer {
@@ -174,4 +184,9 @@ footer h3 {
 }
 footer span {
     color: mediumvioletred;
+}
+
+/* OKIENKO LOGOWANIA */
+.login {
+    float: right;
 }
