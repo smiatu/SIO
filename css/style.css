@@ -122,12 +122,13 @@ a {
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
+    margin: 10px;
 }
 .colBig div h3 {
     margin: 0 auto;
     font-size: 30px;
     height: 20px;
-    display: inline-block;
+    display: block;
 }
 .colBig div p {
     height: 30px;

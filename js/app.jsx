@@ -7,10 +7,12 @@ import {
     Switch,
     NavLink,
 } from "react-router-dom";
+// import poniżej miał powodować scrollowanie okna do otwieranych kolekcji, niestety nie zadziałało
 // import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed';
 
 document.addEventListener("DOMContentLoaded", function(){
 
+    // Nav to komponent headera, tutaj znajduje się górne menu
     class Nav extends React.Component {
         render(){
             return(
@@ -29,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function(){
             )
         }
     }
+
+    // Strona główna
     class Home extends React.Component {
         constructor(props){
             super(props);
@@ -37,9 +41,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 currentUser: this.props.currentUser,
             }
         }
+
         render(){
-
-
             return (
                 <div>
                     <h1>HOME</h1>
@@ -50,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function(){
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium blanditiis consequatur, consequuntur corporis cupiditate dignissimos dolor eaque est illo incidunt magnam magni nobis nulla officia, provident ratione sapiente vero! Aliquam animi aperiam asperiores, atque blanditiis commodi cupiditate debitis distinctio dolor dolore eaque, eligendi eos error eum explicabo impedit in incidunt ipscotusieodjebujeam minima nobis odit optio perspiciatis porro praesentium saepe sapiente ut. Enim eum fuga iste labore laborum, magnam nostrum perferendis quasi rem repudiandae sequi temporibus ut voluptas? Aspernatur, fuga, nam. Ab aliquam autem corporis, debitis delectus doloremque enim ipsum, molestiae nemo nulla pariatur perspiciatis reiciendis reprehenderit. Aliquid, provident quod.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, assumenda deleniti eius, eos eveniet facilis in ipsum modi molestias nostrum, vero voluptas voluptatibus! Consectetur id illum inventore natus           quos. Assumenda nesciunt nihil voluptanie dziala gownotem voluptatibus.sasasasas Ad aliquam dignissimos dolor eius esse explicabo fugiat fugit harum illum ipsum minus nihil obcaecati provident sed sit, soluta sunt tenetur unde ut voluptate? Ad delectus dignissimos, explicabo itaque laboriosam laborum obcaecati perferendis quos recusandae temporibus? Autem dolor earum eum explicabo magnam omnis perspiciatis praesentium voluptatem.</p>
                     </article>
+                    {/*articleRight jest przygotowany pod jakąś treść lub obrazek, który miałby znajdować się po prawej stronie strony głównej, póki co nic takiego nie mam, przy poprawnym przeszukiwaniu po tagach i filtrowaniu mógłby to być na przykład jakiś flowchart*/}
                     <article className="articleRight">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, temporibus?</p>
                     </article>
@@ -58,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
 
+    // podstrona Kolekcjonerzy
     class Collectors extends React.Component {
         constructor(props){
             super(props);
@@ -68,10 +73,12 @@ document.addEventListener("DOMContentLoaded", function(){
         }
 
         render(){
-            console.log(this.state.users);
+            // console.log(this.state.users);
+            //informacja do pojawienia się przed wczytaniem danych z bazy, lub przy problemach z bazą danych
             if(this.state.users == false){
                 return <h1>Proszę czekać, wczytuję listę kolekcjonerów...</h1>
             }
+            //to jest render właściwej listy, każdy element jest przy okazji linkiem kierującym na podstronę o nim samym
             const list = this.state.users.map( i =>
                 <li key={i.id} className={"collectors"}>
                     <NavLink to={"collectors/"+i.name}>
@@ -91,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function(){
             fetch("http://localhost:3000/users")
                 .then(resp => resp.json())
                 .then(data => {
-                    console.log(data);
+                    //console.log(data);
                     this.setState({
                         users: data,
                     })
@@ -101,6 +108,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 })
         }
     }
+
+    // podstrona o konkretnych kolekcjonerach
     class CollectorInfo extends React.Component {
         constructor(props){
             super(props);
@@ -111,24 +120,29 @@ document.addEventListener("DOMContentLoaded", function(){
                 collections: [],
                 itemView: "itemListHidden",
                 colView: "colNormal",
+                // active było przygotowane pod scrollIntoView, nie zadziałało
                 // active: false,
             }
         }
         render(){
-            const { active } = this.state;
+            // przygotowane pod scrollIntoView
+            // const { active } = this.state;
+            // sprawdza czy nazwa użytkownika podana w adresie url znajduje się w obiekcie w bazie
             if(this.state.users == false){
                 return <h1>Proszę czekać, sprawdzam poprawność...</h1>
             }
 
+            // to tutaj dzieje się magia - sprawdzamy indeks konkretnego użytkownika w this.state.usersnames, ktore mamy sciagniete na poziomie fetch, po czym sprawdzamy po nazwie czy pokrywa sie z podanym autorem ktorejkolwiek z kolekcji, jesli tak, to zwracamy kolekcję w formie listy
             if(this.state.usersNames.indexOf(this.props.match.params.collector) != -1){
                 const thisUserCollections = [];
                 for(let i=0; i<this.state.collections.length; i++){
-                    console.log(this.state.collections[i].author);
+                    //console.log(this.state.collections[i].author);
                     if(this.props.match.params.collector == this.state.collections[i].author){
-                        console.log(this.state.collections[i]);
+                        //console.log(this.state.collections[i]);
                         thisUserCollections.push(this.state.collections[i]);
                     }
                 }
+                // tutaj render do powyzszego pieknego ifa w forze w ifie
                 const list = thisUserCollections.map( i =>
                     <li key={i.id} className={this.state.colView} onClick={this.renderCollection}>
                         <div onClick={this.renderCollection} className={"fullCol", "colBasic"}>
@@ -167,8 +181,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
         }
 
+        // event, ktory zmienia widok: po kliknieciu kolekcja staje sie widoczna/niewidoczna, a kafelkowa reprezentacja jej naglowka rozwija sie lub zwija; active przygotowane pod scrollIntoView
         renderCollection = (e) => {
-            console.log(e.target);
+            //console.log(e.target);
             this.setState({
                 itemView: this.state.itemView == "itemList" ? "itemListHidden" : "itemList",
                 colView: this.state.colView == "colNormal" ? "colBig" : "colNormal",
@@ -192,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function(){
             fetch("http://localhost:3000/collections")
                 .then(resp => resp.json())
                 .then(data => {
-                    console.log(data);
+                    //console.log(data);
                     this.setState({
                         collections: data,
                     })
@@ -203,6 +218,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
         }
     }
+
+    // podstrona Kolekcje
     class Collections extends React.Component {
         constructor(props){
             super(props);
@@ -213,8 +230,10 @@ document.addEventListener("DOMContentLoaded", function(){
                 colView: "colNormal",
             }
         }
+
+        // event na klik zwijajacy/rozwijajacy widok kolekcji - listy, zmieniajacy widok naglowka kolekcji, scrollIntoView nie dziala
         renderCollection = (e) => {
-            console.log(e.target);
+            //console.log(e.target);
             this.setState({
                 itemView: this.state.itemView == "itemList" ? "itemListHidden" : "itemList",
                 colView: this.state.colView == "colNormal" ? "colBig" : "colNormal"
@@ -263,7 +282,7 @@ document.addEventListener("DOMContentLoaded", function(){
             fetch("http://localhost:3000/collections")
                 .then(resp => resp.json())
                 .then(data => {
-                    console.log(data);
+                    //console.log(data);
                     this.setState({
                         collections: data,
                     })
@@ -273,6 +292,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 })
         }
     }
+
+    // podstrona kontakt, nie wymaga za bardzo tłumaczenia
     class Contact extends React.Component {
         render(){
             return (
@@ -289,6 +310,8 @@ document.addEventListener("DOMContentLoaded", function(){
             )
         }
     }
+
+    // podstrona z formularzem do wprowadzania danych do bazy danych kolekcji, niestety najbardziej zaśmiecony element
     class Insert extends React.Component {
         constructor(props){
             super(props);
@@ -309,6 +332,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 // currentUser: this.props.currentUser,
             }
         }
+        // każde okienko formularza ma swój event; event author docelowo miał automatycznie ściągać autora z propsów - zalogowanego użytkownika, póki co mnie to przerosło
         handleChangeId = (e) => {
             this.setState({
                 id: this.state.existingCollections.length,
@@ -324,8 +348,9 @@ document.addEventListener("DOMContentLoaded", function(){
                 author: e.target.value,
             })
         }
+        // poniższy handleClick pobiera ze state dane do stworzenia nagłówka powstającego JSONa, jest tu trochę śmieci, ale narazie strach je ruszać
         handleHeadClick = () => {
-            console.log("klik");
+            //console.log("klik");
 
             this.setState({
                 readyToSend: `{"id": ${this.state.id},
@@ -373,6 +398,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 tags: e.target.value,
             })
         }
+        // poniższy event dodaje kolejne elementy - przedmioty do powstającego JSONa
         handleAddClick = () => {
             const tagsFixer = "['" + this.state.tags.replace(/,/g, "', '") + "']";
             const nextItem = `
@@ -384,21 +410,22 @@ document.addEventListener("DOMContentLoaded", function(){
                         "tags": ${tagsFixer}
                     }`;
 
-            console.log(nextItem);
+            //console.log(nextItem);
             const newArray = this.state.arrToSend;
             newArray.push(nextItem);
-            console.log(newArray);
+            //console.log(newArray);
             this.setState({
                 arrToSend: newArray,
             })
         }
+        // event do buttona deklarujacego chec wyslania kolekcji, domyka JSON odpowiednimi nawiasami, wysyla za pomoca POST dane do naszej lokalnej bazy danych
         handleReady = () => {
             const closingBrackets = `]
             }`;
             const readyArr = this.state.arrToSend;
             let readyString = readyArr.toString();
             readyString = readyString + closingBrackets;
-            console.log(readyString);
+            //console.log(readyString);
 
             fetch('http://localhost:3000/collections', {
                 method: "POST",
@@ -408,6 +435,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 }
             });
         }
+
+        // ponizszy render pokazuje dwa male formularze - pierwszy od tworzenia naglowka kolekcji tj. deklaracji nazwy, nazwy uzytkownika i id, drugi od kolejnych przedmiotow. trzeci div zawiera textarea, w ktorym wyswietla sie podglad powstajacego JSON
         render(){
             return (
                 <div className="collectionForm">
@@ -426,7 +455,7 @@ document.addEventListener("DOMContentLoaded", function(){
                         <button onClick={this.handleAddClick}>Dodaj kolejny element</button>
                     </div>
                     <div>
-                        <h3>Podgląd arrToSend:</h3>
+                        <h3>Podgląd pliku wyjściowego:</h3>
                         <textarea value={this.state.arrToSend} className="toSend"/>
                         <br />
                         <button onClick={this.handleReady}>Kolekcja gotowa</button>
@@ -438,7 +467,7 @@ document.addEventListener("DOMContentLoaded", function(){
             fetch("http://localhost:3000/collections")
                 .then(resp => resp.json())
                 .then(data => {
-                    console.log(data);
+                    //console.log(data);
                     this.setState({
                         existingCollections: data,
                     })
@@ -448,6 +477,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 })
         }
     };
+
+    // footer - widoczny na kazdej podstronie
     class Foot extends React.Component {
         render(){
             return (
@@ -459,6 +490,8 @@ document.addEventListener("DOMContentLoaded", function(){
             )
         }
     }
+
+    // główny komponent, w którym zawierają się wszystkie inne. zawiera się tutaj okienko logowania i caly hashrouting
     class App extends React.Component {
         constructor(props){
             super(props);
@@ -480,8 +513,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 password: e.target.value,
             })
         }
+        // event ściąga z bazy danych właściwości name i password obiektów user. zlepia je w jednego stringa, porównuje z identycznie zlepianymi wartościami name - password pobranymi z formularza. Jeśli pary zgadzają się, zostaje zalogowany użytkownik - jego name zostaje przekazany do state.currentUser
         handleLoginButton = () => {
-            //dziala. sprawdza czy haslo pasuje do wpisanej nazwy uzytkownika, jesli tak, to zapisuje w currentUser
             const usersMap = this.state.users.map(i => i.name + i.password);
             for(let i=0; i<usersMap.length; i++){
                 if(this.state.userName + this.state.password == usersMap[i]){
@@ -494,10 +527,10 @@ document.addEventListener("DOMContentLoaded", function(){
         render(){
             let loginWindow = null;
             if(this.state.currentUser) {
-                loginWindow = <h3 className="login clearfix">{this.state.currentUser}</h3>
+                loginWindow = <h3 className="login">{this.state.currentUser}</h3>
             } else {
                 loginWindow = (
-                    <div className="login clearfix">
+                    <div className="login">
                         <input type="text" value={this.state.userName} onChange={this.handleChangeUserName}/>
                         <input type="password" value={this.state.password} onChange={this.handleChangePassword}/>
                         <button onClick={this.handleLoginButton}>Zaloguj się</button>
@@ -531,7 +564,7 @@ document.addEventListener("DOMContentLoaded", function(){
             fetch("http://localhost:3000/users")
                 .then(resp => resp.json())
                 .then(data => {
-                    console.log(data);
+                    //console.log(data);
                     this.setState({
                         users: data,
                     })
