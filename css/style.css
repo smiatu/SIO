@@ -154,7 +154,11 @@ a {
 .contact h2 {
     font-size: 25px;
 }
-
+/* STYLE DLA INSERT*/
+.toSend {
+    height: 500px;
+    width: 500px;
+}
 /*STYLE DLA FOOTER*/
 
 footer {

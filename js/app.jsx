@@ -7,6 +7,7 @@ import {
     Switch,
     NavLink,
 } from "react-router-dom";
+// import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed';
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -29,20 +30,28 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
     class Home extends React.Component {
+        constructor(props){
+            super(props);
+
+            this.state={
+                currentUser: this.props.currentUser,
+            }
+        }
         render(){
+
+
             return (
                 <div>
                     <h1>HOME</h1>
                     <article className="articleLeft">
                         <h2>Witamy na Stuff I OWN</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto consectetur facere id mollitia, odio quas voluptatem? Debitis deserunt ipsam laudantium natus porro. Aliquam autem beatae ducimus eaque esse    exercitationem impedit ipsam iusto nesciunt nisi numquam perferendis perspiciatis quam quia recusandae repudiandae rerum, sit suscipit ullam ut velit voluptates voluptatum!</p>
+                        <p>Witam cię na stronie StuffIOWN - portalu służącemu wprowadzaniu swoich kolekcji. Możesz tutaj pochwalić się czymś, co zbierasz - czy to znaczki, czy książki, czy kolekcja płyt. Na kolejnych podstronach możesz: przejrzeć założone profile użytkowników - kolekcjonerów, a po wybraniu któregoś zobaczyć wszystkie wprowadzone przez niego kolekcje; zobaczyć pełną listę wprowadzonych kolekcji (po kliknięciu widok rozwija się i widać poszczególne przedmioty); wprowadzić swój własny zbiór poprzez formularz. Strona cały czas jest w budowie i zostało na niej bardzo dużo rzeczy do poprawy i wiele funkcjonalności do wprowadzenia, zachęcam więc aby wszystkie pomysły i uwagi przesyłać mi mailowo. Adres znajdziesz w zakładce Kontakt. Zapraszam! </p>
+                        <p>Tutaj będzie już tylko gibberish po łacinie i trochę losowo wrzuconych przekleństw. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto consectetur facere id mollitia, odio quas voluptatem? Debitis deserunt ipsam laudantium natus porro. Aliquam autem beatae ducimus eaque esse    exercitationem impedit ipsam iusto nesciunt nisi numquam perferendis perspiciatis quam quia recusandae repudiandae rerum, sit suscipit ullam ut velit voluptates voluptatum!</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium blanditiis consequatur, consequuntur corporis cupiditate dignissimos dolor eaque est illo incidunt magnam magni nobis nulla officia, provident ratione sapiente vero! Aliquam animi aperiam asperiores, atque blanditiis commodi cupiditate debitis distinctio dolor dolore eaque, eligendi eos error eum explicabo impedit in incidunt ipscotusieodjebujeam minima nobis odit optio perspiciatis porro praesentium saepe sapiente ut. Enim eum fuga iste labore laborum, magnam nostrum perferendis quasi rem repudiandae sequi temporibus ut voluptas? Aspernatur, fuga, nam. Ab aliquam autem corporis, debitis delectus doloremque enim ipsum, molestiae nemo nulla pariatur perspiciatis reiciendis reprehenderit. Aliquid, provident quod.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, assumenda deleniti eius, eos eveniet facilis in ipsum modi molestias nostrum, vero voluptas voluptatibus! Consectetur id illum inventore natus           quos. Assumenda nesciunt nihil voluptanie dziala gownotem voluptatibus.sasasasas Ad aliquam dignissimos dolor eius esse explicabo fugiat fugit harum illum ipsum minus nihil obcaecati provident sed sit, soluta sunt tenetur unde ut voluptate? Ad delectus dignissimos, explicabo itaque laboriosam laborum obcaecati perferendis quos recusandae temporibus? Autem dolor earum eum explicabo magnam omnis perspiciatis praesentium voluptatem.</p>
                     </article>
                     <article className="articleRight">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad, aperiam asperiores blanditiis consequuntur cupiditate, delectus deleniti ducimus earum ex, laborum magni modi nisi pariatur possimus praesentium provident quam quisquam quo repudiandae sapiente sit ullam veritatis. Libero magni quas voluptate!
-                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, temporibus?</p>
                     </article>
                 </div>
             )
@@ -64,8 +73,6 @@ document.addEventListener("DOMContentLoaded", function(){
                 return <h1>Proszę czekać, wczytuję listę kolekcjonerów...</h1>
             }
             const list = this.state.users.map( i =>
-
-                //let link = "/collectors/" + i.name;
                 <li key={i.id} className={"collectors"}>
                     <NavLink to={"collectors/"+i.name}>
                     <img src={i.avatar} />
@@ -104,10 +111,11 @@ document.addEventListener("DOMContentLoaded", function(){
                 collections: [],
                 itemView: "itemListHidden",
                 colView: "colNormal",
+                // active: false,
             }
         }
         render(){
-
+            const { active } = this.state;
             if(this.state.users == false){
                 return <h1>Proszę czekać, sprawdzam poprawność...</h1>
             }
@@ -123,23 +131,25 @@ document.addEventListener("DOMContentLoaded", function(){
                 }
                 const list = thisUserCollections.map( i =>
                     <li key={i.id} className={this.state.colView} onClick={this.renderCollection}>
-                        <div onClick={this.renderCollection} className="fullCol">
+                        <div onClick={this.renderCollection} className={"fullCol", "colBasic"}>
                             <div>
                                 <h3>{i.colName}</h3>
                                 <p>Właściciel: {i.author}</p>
                             </div>
-                            <ul className={this.state.itemView}>
-                                {i.data.map(j =>
-                                    <li>
-                                        <img src={j.image} />
-                                        <br />
-                                        {j.author}
-                                        <br />
-                                        {j.name}
-                                        <br />
-                                        {j.date}
-                                    </li>)}
-                            </ul>
+                            {/*<ScrollIntoViewIfNeeded active={active} elementType="span">*/}
+                                <ul className={this.state.itemView}>
+                                    {i.data.map(j =>
+                                        <li>
+                                            <img src={j.image} />
+                                            <br />
+                                            {j.author}
+                                            <br />
+                                            {j.name}
+                                            <br />
+                                            {j.date}
+                                        </li>)}
+                                </ul>
+                            {/*</ScrollIntoViewIfNeeded>*/}
                         </div>
                     </li>
                 )
@@ -163,7 +173,8 @@ document.addEventListener("DOMContentLoaded", function(){
             console.log(e.target);
             this.setState({
                 itemView: this.state.itemView == "itemList" ? "itemListHidden" : "itemList",
-                colView: this.state.colView == "colNormal" ? "colBig" : "colNormal"
+                colView: this.state.colView == "colNormal" ? "colBig" : "colNormal",
+                // active: !this.state.active,
             })
         }
 
@@ -210,6 +221,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 itemView: this.state.itemView == "itemList" ? "itemListHidden" : "itemList",
                 colView: this.state.colView == "colNormal" ? "colBig" : "colNormal"
             })
+            // scrollIntoView(e, {block: 'end', behavior: 'smooth'});
         }
 
         render(){
@@ -284,22 +296,24 @@ document.addEventListener("DOMContentLoaded", function(){
             super(props);
 
             this.state = {
-                id: 666,
+                existingCollections: [],
+                id: 0,
                 colName: "Nazwa kolekcji",
-                author: "Ksywa autora",
-                data: 1,
+                author: "Autor",
+                data: [],
                 name: 2,
                 artist: 3,
                 image: 4,
                 date: 5,
                 tags: 6,
                 readyToSend: ``,
+                arrToSend: [],
+                // currentUser: this.props.currentUser,
             }
         }
         handleChangeId = (e) => {
-            //NIEE TU MA SIE ROBIC AUTOMATYCZNIE
             this.setState({
-                id: e.target.value,
+                id: this.state.existingCollections.length,
             })
         }
         handleChangeColName = (e) => {
@@ -314,21 +328,130 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         handleHeadClick = () => {
             console.log("klik");
+            this.setState({
+                readyToSend: `{"id": ${this.state.id},
+                "colName": "${this.state.colName}",
+                "author": "${this.state.author}",
+                "data": [
+                    {
+                    "name": "${this.state.name}",
+                    "author": "${this.state.artist}",
+                    "image": "${this.state.image}",
+                    "date": ${this.state.date},
+                    "tags": [${this.state.tags}]
+                    }
+                ]
+            }`,
+                arrToSend: [`               {"id": ${this.state.id},
+                "colName": "${this.state.colName}",
+                "author": "${this.state.author}",
+                "data": [
+                    {
+                        "name": "${this.state.name}",
+                        "author": "${this.state.artist}",
+                        "image": "${this.state.image}",
+                        "date": ${this.state.date},
+                        "tags": [${this.state.tags}]
+                    }`],
+            })
+        }
+        handleChangeName = (e) => {
+            this.setState({
+                name: e.target.value,
+            })
+        }
+        handleChangeArtist = (e) => {
+            this.setState({
+                artist: e.target.value,
+            })
+        }
+        handleChangeImage = (e) => {
+            this.setState({
+                image: e.target.value,
+            })
+        }
+        handleChangeDate = (e) => {
+            this.setState({
+                date: e.target.value,
+            })
+        }
+        handleChangeTags = (e) => {
+            this.setState({
+                tags: e.target.value,
+            })
+        }
+        handleAddClick = () => {
+            const nextItem = `
+                    {
+                        "name": "${this.state.name}",
+                        "author": "${this.state.artist}",
+                        "image": "${this.state.image}",
+                        "date": ${this.state.date},
+                        "tags": [${this.state.tags}]
+                    }`;
+            console.log(nextItem);
+            const newArray = this.state.arrToSend;
+            newArray.push(nextItem);
+            console.log(newArray);
+            this.setState({
+                arrToSend: newArray,
+            })
+        }
+        handleReady = () => {
+            const closingBrackets = `]
+            }`;
+            const readyArr = this.state.arrToSend;
+            let readyString = readyArr.toString();
+            readyString = readyString + closingBrackets;
+            console.log(readyString);
+
+            fetch('http://localhost:3000/collections', {
+                method: "POST",
+                body:( readyString ),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
         }
         render(){
+            // console.log("poszukiwanie curentusera" + this.props.currentUser);
             return (
                 <div>
                     <div className="collectionHead">
-                        <input type="text" value={this.state.id} onChange={this.handleChangeId}/>
-                        <input type="text" value={this.state.colName} onChange={this.handleChangeColName}/>
-                        <input type="text" value={this.state.author} onChange={this.handleChangeAuthor}/>
-                        <button onClick={this.handleHeadClick}>Stwórz nagłówek inputu</button>
+                        Id: <input type="text" value={this.state.id} onChange={this.handleChangeId}/>
+                        Nazwa kolekcji: <input type="text" value={this.state.colName} onChange={this.handleChangeColName}/>
+                        Kolekcjoner: <input type="text" value={this.state.author} onChange={this.handleChangeAuthor}/>
+                        <button onClick={this.handleHeadClick}>Stwórz input</button>
                     </div>
+                    <hr />
                     <div>
-                        <input type="text" value={this.state.readyToSend}/>
+                        Nazwa przedmiotu: <input type="text" value={this.state.name} onChange={this.handleChangeName}/>
+                        Autor: <input type="text" value={this.state.artist} onChange={this.handleChangeArtist}/>
+                        Url zdjęcia: <input type="text" value={this.state.image} onChange={this.handleChangeImage}/>
+                        Data utworzenia: <input type="text" value={this.state.date} onChange={this.handleChangeDate}/>
+                        Tagi: <input type="text" value={this.state.tags} onChange={this.handleChangeTags}/>
+                        <button onClick={this.handleAddClick}>Dodaj kolejny element</button>
+                    </div>
+                    <hr />
+                    <div>
+                        Podgląd arrToSend: <textarea type="text" value={this.state.arrToSend} className="toSend"/>
+                        <button onClick={this.handleReady}>Kolekcja gotowa</button>
                     </div>
                 </div>
             )
+        }
+        componentDidMount(){
+            fetch("http://localhost:3000/collections")
+                .then(resp => resp.json())
+                .then(data => {
+                    console.log(data);
+                    this.setState({
+                        existingCollections: data,
+                    })
+                })
+                .catch(err => {
+                    console.log(err);
+                })
         }
     };
     class Foot extends React.Component {
@@ -343,12 +466,56 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
     class App extends React.Component {
+        constructor(props){
+            super(props);
+
+            this.state={
+                users: [],
+                userName: "",
+                password: "",
+                currentUser: "",
+            }
+        }
+        handleChangeUserName = (e) => {
+            this.setState({
+                userName: e.target.value,
+            })
+        }
+        handleChangePassword = (e) => {
+            this.setState({
+                password: e.target.value,
+            })
+        }
+        handleLoginButton = () => {
+            //dziala. sprawdza czy haslo pasuje do wpisanej nazwy uzytkownika, jesli tak, to zapisuje w currentUser
+            const usersMap = this.state.users.map(i => i.name + i.password);
+            for(let i=0; i<usersMap.length; i++){
+                if(this.state.userName + this.state.password == usersMap[i]){
+                    this.setState({
+                        currentUser: this.state.userName,
+                    })
+                }
+            }
+        }
         render(){
+            let loginWindow = null;
+            if(this.state.currentUser) {
+                loginWindow = <h3>{this.state.currentUser}</h3>
+            } else {
+                loginWindow = (
+                    <div className="login">
+                        <input type="text" value={this.state.userName} onChange={this.handleChangeUserName}/>
+                        <input type="password" value={this.state.password} onChange={this.handleChangePassword}/>
+                        <button onClick={this.handleLoginButton}>Zaloguj się</button>
+                    </div>
+                )
+            }
             return (
                 <div>
                     <HashRouter>
                         <div>
                             <Nav />
+
                             <Switch>
                                 <Route exact path="/" component={Home} />
                                 <Route exact path="/collectors" component={Collectors} />
@@ -357,11 +524,27 @@ document.addEventListener("DOMContentLoaded", function(){
                                 <Route exact path="/insert" component={Insert} />
                                 <Route exact path="/contact" component={Contact} />
                             </Switch>
+                            <div>
+                                {loginWindow}
+                            </div>
                             <Foot />
                         </div>
                     </HashRouter>
                 </div>
             )
+        }
+        componentDidMount(){
+            fetch("http://localhost:3000/users")
+                .then(resp => resp.json())
+                .then(data => {
+                    console.log(data);
+                    this.setState({
+                        users: data,
+                    })
+                })
+                .catch(err => {
+                    console.log(err);
+                })
         }
     }
     ReactDOM.render(
