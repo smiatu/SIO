@@ -1,96 +1,853 @@
 {
-  "items": [
-    {
-      "id": 1,
-      "name": "Never Mind The Bollocks",
-      "author": "Sex Pistols"
-      "image": ,
-      "tags": ["punk", "rock"],
-      "date": "1977",
-    },
-    {
-      "id": 2,
-      "name": "Model S",
-      "brand": "Tesla"
-    },
-    {
-      "id": 3,
-      "name": "Polonez Caro",
-      "brand": "Daewoo"
-    },
-    {
-      "id": 4,
-      "name": "i3",
-      "brand": "BMW"
-    },
-    {
-      "id": 5,
-      "name": "X6 M",
-      "brand": "BMW"
-    },
-    {
-      "id": 6,
-      "name": "Model X",
-      "brand": "Tesla"
-    },
-    {
-      "id": 7,
-      "name": "Matiz",
-      "brand": "Daewoo"
-    },
-    {
-      "id": 8,
-      "name": "XF",
-      "brand": "Jaguar"
-    },
-    {
-      "id": 9,
-      "name": "RX-7",
-      "brand": "Mazda"
-    },
-    {
-      "id": 10,
-      "name": "Model 3",
-      "brand": "Tesla"
-    },
-    {
-      "id": 11,
-      "name": "Celica",
-      "brand": "Toyota"
-    },
-    {
-      "id": 12,
-      "name": "Tico",
-      "brand": "Daewoo"
-    },
-    {
-      "id": 13,
-      "name": "Roadster",
-      "brand": "Tesla"
-    },
-    {
-      "id": 14,
-      "name": "Supra",
-      "brand": "Toyota"
-    },
-    {
-      "id": 15,
-      "name": "i8",
-      "brand": "BMW"
-    }
-  ],
   "users": [
     {
       "id": 1,
+      "password": "dupa",
       "name": "Smiatu",
       "description": "Założyciel strony, zbieracz wszelakiego szmelcu: CD, książki, karty, złom.",
       "avatar": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/428668_576188765748659_1282475711_n.jpg?_nc_cat=0&oh=c809e020a8234a33d6b543bc4255052d&oe=5C300BAD"
     },
     {
       "id": 2,
+      "password": "dupa",
       "name": "Klempos",
       "description": "Nowe wcielenie Hulka Hogana",
-      "avatar": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/428668_576188765748659_1282475711_n.jpg?_nc_cat=0&oh=c809e020a8234a33d6b543bc4255052d&oe=5C300BAD"
+      "avatar": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/13906772_10209997924214298_7681913732972065605_n.jpg?_nc_cat=0&oh=9253a6fe2df3e11cf186e15333e37d08&oe=5C375612"
     },
+    {
+      "id": 3,
+      "password": "dupa",
+      "name": "Zibi",
+      "description": "Punk na 100 000 000% !!!",
+      "avatar": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/29683641_2080884718593782_447062339742173117_n.jpg?_nc_cat=0&oh=3d3bdd024e20e57869be4ca5d93b9923&oe=5BF27726"
+    },
+    {
+      "id": 4,
+      "password": "dupa",
+      "name": "Maria Curie-Skłodowska",
+      "description": "Zbiera izotopy",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Marie_Curie_c1920.png/175px-Marie_Curie_c1920.png"
+    },
+    {
+      "id": 5,
+      "password": "dupa",
+      "name": "Albert Einstein",
+      "description": "To dość względne co zbiera",
+      "avatar": "https://www.wprost.pl/_thumb/90/76/1a6b7a6312b026d0f0adff46128d.jpeg"
+    },
+    {
+      "id": 6,
+      "password": "dupa",
+      "name": "Isaac Newton",
+      "description": "Kolekcjoner jabłek",
+      "avatar": "https://burusi.files.wordpress.com/2009/05/isaac-newton2.jpg"
+    },
+    {
+      "id": 7,
+      "password": "dupa",
+      "name": "Stephen Hawking",
+      "description": "Wiedział, że małe czarne dziury świecą zanim to było fajne",
+      "avatar": "https://tylkonauka.pl/sites/default/files/styles/large/public/stephen_hawking.jpg?itok=fRho8VmL"
+    },
+    {
+      "id": 8,
+      "password": "dupa",
+      "name": "Nikola Tesla",
+      "description": "Na pewno nie zbiera patentów",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBpPTR16GbcHOuLbnW4XiDAJzD9MZFAzRgXmRdJHsnijDNnst6"
+    },
+    {
+      "id": 9,
+      "password": "dupa",
+      "name": "Thomas Edison",
+      "description": "Pasjonat cudzych patentów",
+      "avatar": "https://bizarrela.com/wp-content/uploads/2018/04/BLA_Thomas_alva_Edison.jpg"
+    },
+    {
+      "id": 10,
+      "password": "dupa",
+      "name": "Charles Darwin",
+      "description": "Fan naklejek ze zwierzętami. Podróżnik, głosiciel nowych teorii.",
+      "avatar": "https://theunboundedspirit.com/wp-content/uploads/2016/05/charles-darwin.jpg"
+    },
+    {
+      "id": 11,
+      "password": "dupa",
+      "name": "Zibi2",
+      "description": "Punk na 100 000 000% !!!",
+      "avatar": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/29683641_2080884718593782_447062339742173117_n.jpg?_nc_cat=0&oh=3d3bdd024e20e57869be4ca5d93b9923&oe=5BF27726"
+    },
+    {
+      "id": 12,
+      "password": "dupa",
+      "name": "Zibi Reaktywowany",
+      "description": "Punk na 10% !!!",
+      "avatar": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/29683641_2080884718593782_447062339742173117_n.jpg?_nc_cat=0&oh=3d3bdd024e20e57869be4ca5d93b9923&oe=5BF27726"
+    },
+    {
+      "id": 13,
+      "password": "dupa",
+      "name": "Zibi Mój Manekin",
+      "description": "Punk na 161% !!!",
+      "avatar": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/29683641_2080884718593782_447062339742173117_n.jpg?_nc_cat=0&oh=3d3bdd024e20e57869be4ca5d93b9923&oe=5BF27726"
+    },
+    {
+      "id": 14,
+      "password": "dupa",
+      "name": "Zibi5",
+      "description": "Blakmetalowiec na 666%",
+      "avatar": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/29683641_2080884718593782_447062339742173117_n.jpg?_nc_cat=0&oh=3d3bdd024e20e57869be4ca5d93b9923&oe=5BF27726"
+    },
+    {
+      "id": 15,
+      "password": "dupa",
+      "name": "Zibi6",
+      "description": "Zdecydowanie za dużo razy się tu pojawia, jeszcze się obrazi o nadużycia",
+      "avatar": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/29683641_2080884718593782_447062339742173117_n.jpg?_nc_cat=0&oh=3d3bdd024e20e57869be4ca5d93b9923&oe=5BF27726"
+    }
+  ],
+  "collections": [
+    {
+      "id": 0,
+      "colName": "Kolekcja płyt CD # - B",
+      "author": "Smiatu",
+      "data": [
+        {
+          "name": "For When Tommorow Comes",
+          "author": "1125",
+          "image": "https://d.allegroimg.com/s400/03a12e/249e0f6648fcae48b4211b2125fd",
+          "date": 2008,
+          "tags": [
+            "hardcore",
+            "polish",
+            "punk"
+          ]
+        },
+        {
+          "name": "XXX",
+          "author": "1984",
+          "image": "https://d.allegroimg.com/s512/01208e/55904cce41bb9bcc107237ada05d",
+          "date": 2015,
+          "tags": [
+            "country",
+            "outlaw"
+          ]
+        },
+        {
+          "name": "The Good, The Bad and The 4 Skins",
+          "author": "4 Skins, The",
+          "image": "http://captainoi.com/wp-content/uploads/2016/02/AHOY-CD-003.jpg",
+          "date": 1982,
+          "tags": [
+            "oi",
+            "punk",
+            "british"
+          ]
+        },
+        {
+          "name": "Homicide - The Best Of",
+          "author": "999",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-k1CEe7y6-mumO9VCm-26uo-he1Ikv8G3F-b307J10uthFJq3",
+          "date": 1998,
+          "tags": [
+            "punk",
+            "british",
+            "77"
+          ]
+        },
+        {
+          "name": "The Punk Singles 1977-1980",
+          "author": "999",
+          "image": "https://img.discogs.com/qcvQM2oqI0HYt0mdHuvYomIJcLM=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2388394-1373796811-8925.jpeg.jpg",
+          "date": 2001,
+          "tags": [
+            "punk",
+            "british",
+            "77"
+          ]
+        },
+        {
+          "name": "Beer Drinker Survivors",
+          "author": "Acidez",
+          "image": "https://img.discogs.com/VzbsNPfEGWv_eKU3WqLBOlPw8Ws=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5774614-1402305639-5215.jpeg.jpg",
+          "date": 2014,
+          "tags": [
+            "punk",
+            "street punk",
+            "hardcore"
+          ]
+        },
+        {
+          "name": "Grzeczna Młodzież",
+          "author": "ADHD Syndrom",
+          "image": "https://img.discogs.com/r-6W1lkbWKKEAgqC3pwwgBF5hxo=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5024183-1416334361-7920.jpeg.jpg",
+          "date": 2009,
+          "tags": [
+            "punk",
+            "polish"
+          ]
+        },
+        {
+          "name": "Nic Się Nie Zmienia",
+          "author": "ADHD Syndrom",
+          "image": "https://img.discogs.com/uN8XBWjhPI-kTu_ePfxg8qZruEc=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5546237-1454866987-5604.jpeg.jpg",
+          "date": 2011,
+          "tags": [
+            "punk",
+            "polish"
+          ]
+        },
+        {
+          "name": "Business Punx",
+          "author": "ADHD Syndrom",
+          "image": "https://img.discogs.com/DHWe6rwnntXxGmgGTCwBIl8QxAk=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5546247-1416336869-6667.jpeg.jpg",
+          "date": 2013,
+          "tags": [
+            "punk",
+            "polish"
+          ]
+        },
+        {
+          "name": "Songs Of Praise",
+          "author": "Adicts, The",
+          "image": "https://img.discogs.com/tJJbaxHnQ6XrmwY1smR9y5iNNOI=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-368427-1447691551-2247.jpeg.jpg",
+          "date": 1982,
+          "tags": [
+            "punk",
+            "british"
+          ]
+        },
+        {
+          "name": "Wszyscy Koło Jechać",
+          "author": "All Wheel Drive",
+          "image": "https://img.discogs.com/n5ExHWai2MBA144yq5socLaxET4=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3405441-1342438138-2743.jpeg.jpg",
+          "date": 2010,
+          "tags": [
+            "punk",
+            "polish"
+          ]
+        },
+        {
+          "name": "Teenage Warning",
+          "author": "Angelic Upstarts",
+          "image": "https://img.discogs.com/UdvuXS3s75QVzRMeJtIBYuHeRJ8=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-368509-1460242023-4460.jpeg.jpg",
+          "date": 1979,
+          "tags": [
+            "punk",
+            "british"
+          ]
+        },
+        {
+          "name": "Pig Iron",
+          "author": "Anti-Nowhere League",
+          "image": "https://img.discogs.com/rqMUzLYJEmbu_Ys2Mcm6WE4cRdw=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2521096-1288546806.jpeg.jpg",
+          "date": 1996,
+          "tags": [
+            "punk",
+            "british"
+          ]
+        },
+        {
+          "name": "Legenda",
+          "author": "Armia",
+          "image": "https://img.discogs.com/wV077uv0DFqVdCRwOl9TXE284kg=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-803934-1160429900.jpeg.jpg",
+          "date": 1991,
+          "tags": [
+            "punk",
+            "british"
+          ]
+        },
+        {
+          "name": "The Essential",
+          "author": "Armstrong, Louis",
+          "image": "https://img.discogs.com/_ke9pw2FEefSnDYobpu1zhfnq1A=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1479867-1505266080-3133.jpeg.jpg",
+          "date": 1976,
+          "tags": [
+            "jazz",
+            "swing",
+            "dixieland"
+          ]
+        },
+        {
+          "name": "20 Golden Hits",
+          "author": "Armstrong, Louis",
+          "image": "https://img.discogs.com/BvjqFUJJLxvMAO-v1oB9SE6IK0g=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4528472-1374518426-7466.jpeg.jpg",
+          "date": 1975,
+          "tags": [
+            "jazz",
+            "swing",
+            "dixieland"
+          ]
+        },
+        {
+          "name": "Sucker Stories",
+          "author": "Bad Co. Project",
+          "image": "https://img.discogs.com/gtmdDpzlQjyiWTvsQ7Yl545pFCE=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2645902-1479819640-3414.jpeg.jpg",
+          "date": 2006,
+          "tags": [
+            "punk",
+            "german"
+          ]
+        },
+        {
+          "name": "No Control",
+          "author": "Bad Religion",
+          "image": "https://img.discogs.com/VU-g4TLClS8XFwvku5T7croNPrU=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5965534-1407589443-6011.jpeg.jpg",
+          "date": 1989,
+          "tags": [
+            "punk",
+            "american"
+          ]
+        },
+        {
+          "name": "In The Flat Field",
+          "author": "Bauhaus",
+          "image": "https://img.discogs.com/FmuX-brURxxHd2ZLQD4W3AKH_0o=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-379701-1314042510.jpeg.jpg",
+          "date": 1980,
+          "tags": [
+            "post-punk",
+            "goth",
+            "new wave"
+          ]
+        },
+        {
+          "name": "Mask",
+          "author": "Bauhaus",
+          "image": "https://img.discogs.com/7QRBTUll1NVg9PdSVx_r7YpiLjw=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-377225-1438799470-7338.jpeg.jpg",
+          "date": 1981,
+          "tags": [
+            "post-punk",
+            "goth",
+            "new wave"
+          ]
+        },
+        {
+          "name": "The Sky's Gone Out",
+          "author": "Bauhaus",
+          "image": "https://img.discogs.com/IBw5oXPxAIEE-0WMABS3wC-7Abk=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-390514-1371663691-4294.jpeg.jpg",
+          "date": 1982,
+          "tags": [
+            "post-punk",
+            "goth",
+            "new wave"
+          ]
+        },
+        {
+          "name": "Burning From The Inside",
+          "author": "Bauhaus",
+          "image": "https://img.discogs.com/lPnnU0VEgZfYSGcsOZ3OTHbTUlw=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-263051-1155238873.jpeg.jpg",
+          "date": 1983,
+          "tags": [
+            "post-punk",
+            "goth",
+            "new wave"
+          ]
+        },
+        {
+          "name": "The Singles 1981-1983",
+          "author": "Bauhaus",
+          "image": "https://img.discogs.com/tNf8EZtNp38X83uVFhhwTVpDb_I=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-379699-1155669667.jpeg.jpg",
+          "date": 1983,
+          "tags": [
+            "post-punk",
+            "goth",
+            "new wave"
+          ]
+        },
+        {
+          "name": "B.B. King Wails",
+          "author": "B.B. King and his Orchestra",
+          "image": "https://img.discogs.com/wFMyTQcZQdPC3jkbUJYe6yC5X6c=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3173160-1351129042-7063.jpeg.jpg",
+          "date": 1958,
+          "tags": [
+            "blues"
+          ]
+        },
+        {
+          "name": "1",
+          "author": "Beatles, The",
+          "image": "https://img.discogs.com/rkMwEov9oRN3PTJ9g9L3E4-1RTU=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-367280-1142901132.jpeg.jpg",
+          "date": 2000,
+          "tags": [
+            "rock",
+            "beat",
+            "pop rock"
+          ]
+        },
+        {
+          "name": "Rubber Soul",
+          "author": "Beatles, The",
+          "image": "https://img.discogs.com/P4XiroCjtl-2w4T5LFYIq6VDh8g=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-375379-1364394758-6224.jpeg.jpg",
+          "date": 1965,
+          "tags": [
+            "rock",
+            "beat",
+            "pop rock"
+          ]
+        },
+        {
+          "name": "The Great Bee Gees",
+          "author": "Bee Gees",
+          "image": "https://img.discogs.com/W1bF4SGCTgL0cjcVTu3KyQCRdcw=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3680998-1340131541-2668.jpeg.jpg",
+          "date": 1993,
+          "tags": [
+            "rock",
+            "pop"
+          ]
+        },
+        {
+          "name": "Sonic Scapes & Weedy Grooves",
+          "author": "Belzebong",
+          "image": "https://img.discogs.com/SIAAOjZEeG9lb-C5LQMijK-2hac=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4317039-1361568965-6953.jpeg.jpg",
+          "date": 2013,
+          "tags": [
+            "stoner",
+            "doom",
+            "polish"
+          ]
+        },
+        {
+          "name": "Essential",
+          "author": "Billy Idol",
+          "image": "https://img.discogs.com/Oanp3F26nMko861VuPC5oxOg1OU=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3500035-1436983079-7331.jpeg.jpg",
+          "date": 2011,
+          "tags": [
+            "rock",
+            "pop",
+            "synth-pop",
+            "punk",
+            "hard rock"
+          ]
+        },
+        {
+          "name": "Homogenic",
+          "author": "Björk",
+          "image": "https://img.discogs.com/uxfea3KLchzAjDTAPXZUFdZJtW4=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-208286-1513410872-2467.jpeg.jpg",
+          "date": 1997,
+          "tags": [
+            "electronic",
+            "pop"
+          ]
+        },
+        {
+          "name": "Voice Of A Generation",
+          "author": "Blitz",
+          "image": "https://img.discogs.com/jn2mcNbD-ibjuVE72_ISpR6CeQA=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-385863-1188666227.jpeg.jpg",
+          "date": 1982,
+          "tags": [
+            "punk",
+            "oi"
+          ]
+        },
+        {
+          "name": "Second Empire Justice",
+          "author": "Blitz",
+          "image": "https://img.discogs.com/HxBr77b0cQBYnDuJqU4PgcWGmxw=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-914823-1413788960-1603.jpeg.jpg",
+          "date": 1983,
+          "tags": [
+            "punk",
+            "post-punk",
+            "new-wave"
+          ]
+        },
+        {
+          "name": "Blondie",
+          "author": "Blondie",
+          "image": "https://img.discogs.com/6VawnxY6sxhsyImnjHL-ApaOQeU=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5239953-1448457072-3628.jpeg.jpg",
+          "date": 1976,
+          "tags": [
+            "punk",
+            "proto-punk",
+            "new-wave"
+          ]
+        },
+        {
+          "name": "Body Count",
+          "author": "Body Count",
+          "image": "https://img.discogs.com/leIEJGI3Ac2Vw_IljVsql_toRJ4=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-312052-1349637937-8872.jpeg.jpg",
+          "date": 1992,
+          "tags": [
+            "hardcore"
+          ]
+        },
+        {
+          "name": "As Bold As Brass",
+          "author": "Booze&Glory",
+          "image": "https://img.discogs.com/iLVZKVPFHlRz-TSDd7gE40RSBtQ=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5314582-1390324076-8374.jpeg.jpg",
+          "date": 2014,
+          "tags": [
+            "punk",
+            "oi"
+          ]
+        },
+        {
+          "name": "Earthling",
+          "author": "Bowie, David",
+          "image": "https://img.discogs.com/NnH0Mc9_lLHTQkFrgT_Wc0CqSQE=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-132275-1189020047.jpeg.jpg",
+          "date": 1997,
+          "tags": [
+            "pop",
+            "rock"
+          ]
+        },
+        {
+          "name": "Legacy",
+          "author": "Bowie, David",
+          "image": "https://img.discogs.com/wLO2QiaVyoEEZhYDxWrChsl-CJA=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-9337137-1478831429-9995.jpeg.jpg",
+          "date": 2016,
+          "tags": [
+            "pop",
+            "rock"
+          ]
+        },
+        {
+          "name": "Heroes",
+          "author": "Bowie, David",
+          "image": "https://img.discogs.com/LCpy0r2fU4OXXQWkF-6mQLRfsgw=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1326123-1360685865-2353.jpeg.jpg",
+          "date": 1977,
+          "tags": [
+            "rock",
+            "experimental"
+          ]
+        },
+        {
+          "name": "Space Oddity",
+          "author": "Bowie, David",
+          "image": "https://img.discogs.com/YBnHJfcTjSxiiGQKZPorgK0wZzU=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4022889-1386331967-1829.jpeg.jpg",
+          "date": 1973,
+          "tags": [
+            "glam",
+            "rock"
+          ]
+        },
+        {
+          "name": "Blackstar",
+          "author": "Bowie, David",
+          "image": "https://img.discogs.com/3XV0oM-wFk9XcsAC9ICEZqJrZaY=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-7948015-1457204316-2954.jpeg.jpg",
+          "date": 2016,
+          "tags": [
+            "experimental",
+            "rock"
+          ]
+        },
+        {
+          "name": "Low",
+          "author": "Bowie, David",
+          "image": "https://img.discogs.com/rw-46t7fghEq19Tah4LJdKq3fvM=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-216166-1275625649.jpeg.jpg",
+          "date": 1977,
+          "tags": [
+            "ambient",
+            "experimental",
+            "rock"
+          ]
+        },
+        {
+          "name": "Fools Rush In",
+          "author": "Brenda Lee",
+          "image": "https://img.discogs.com/iM3IGiyWEodEPJBpiaaNIINO0VY=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8725821-1467438238-1674.jpeg.jpg",
+          "date": 2013,
+          "tags": [
+            "rockabilly",
+            "ballad"
+          ]
+        },
+        {
+          "name": "Brygada Kryzys",
+          "author": "Brygada Kryzys",
+          "image": "https://img.discogs.com/XzkMOu-2GQK1m4OFYKTRYqkwGnc=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-613509-1497972892-5595.jpeg.jpg",
+          "date": 1982,
+          "tags": [
+            "alternative",
+            "new-wave",
+            "punk"
+          ]
+        },
+        {
+          "name": "The Ultimate Collection",
+          "author": "Buddy Holly",
+          "image": "https://img.discogs.com/pfd4S-7jUKN01G1UTWJE0XXihcM=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5636107-1398591532-9918.jpeg.jpg",
+          "date": 2005,
+          "tags": [
+            "rock&roll"
+          ]
+        },
+        {
+          "name": "Punkophilia",
+          "author": "Bulbulators",
+          "image": "https://img.discogs.com/J2yyLfk0czz3fkODxnB2xbp0aKU=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2918758-1481799005-4051.jpeg.jpg",
+          "date": 2005,
+          "tags": [
+            "punk",
+            "polish"
+          ]
+        },
+        {
+          "name": "Aut Punk Aut Nihil",
+          "author": "Bulbulators",
+          "image": "https://img.discogs.com/giCdhQ-Z4phlVUaDUWuGuuZo04k=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2878080-1376990256-8793.jpeg.jpg",
+          "date": 2007,
+          "tags": [
+            "punk",
+            "polish"
+          ]
+        },
+        {
+          "name": "Principes Morales Punk Aeterna",
+          "author": "Bulbulators",
+          "image": "https://img.discogs.com/m6sV4WvFKTi5f_2pPdR5wxYKnBM=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5812557-1403365424-5718.jpeg.jpg",
+          "date": 1977,
+          "tags": [
+            "punk",
+            "polish"
+          ]
+        },
+        {
+          "name": "Singles Going Steady",
+          "author": "Buzzcocks",
+          "image": "https://img.discogs.com/oOT3lj4vJjP3HV4Ka6DZ5YATbVg=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-399662-1380775177-9773.jpeg.jpg",
+          "date": 1979,
+          "tags": [
+            "punk",
+            "british"
+          ]
+        },
+        {
+          "name": "Another Music In A Different Kitchen",
+          "author": "Buzzcocks",
+          "image": "https://img.discogs.com/GnShOHiOqrBkThVEpYRDbA9JklU=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-450087-1458767750-7689.jpeg.jpg",
+          "date": 1978,
+          "tags": [
+            "punk",
+            "british"
+          ]
+        },
+        {
+          "name": "Love Bites",
+          "author": "Buzzcocks",
+          "image": "https://img.discogs.com/JgeuS06AOCksLfAEnL-sChkzyAM=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-383199-1129357924.jpeg.jpg",
+          "date": 1978,
+          "tags": [
+            "punk",
+            "british"
+          ]
+        },
+        {
+          "name": "Entertaining Friends - Live At The Hammersmith Odeon March 1979",
+          "author": "Buzzcocks",
+          "image": "https://img.discogs.com/LS24vtPyHrJQaMkiJc0_YeC8DmE=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3021565-1412669260-2068.jpeg.jpg",
+          "date": 1992,
+          "tags": [
+            "punk",
+            "british"
+          ]
+        },
+        {
+          "name": "A Different Kind Of Tension",
+          "author": "Buzzcocks",
+          "image": "https://img.discogs.com/Z2CPCWrIaoDztZVSiz_nK8aVxcs=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-372077-1331200544.jpeg.jpg",
+          "date": 1979,
+          "tags": [
+            "punk",
+            "british"
+          ]
+        },
+        {
+          "name": "All Set",
+          "author": "Buzzcocks",
+          "image": "https://img.discogs.com/KKRIZLqQiJBMl-_IXHLFXdnJWYk=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-393253-1456474233-1398.jpeg.jpg",
+          "date": 1996,
+          "tags": [
+            "punk",
+            "british"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "colName": "Kolekcja grawitacyjna",
+      "author": "Isaac Newton",
+      "data": [
+        {
+          "name": "Czerwone jabłuszka bum w czerep",
+          "author": "Grawitacja",
+          "image": "http://4.s.dziennik.pl/pliki/9437000/9437706-jablka-900-556.jpg",
+          "date": 1642,
+          "tags": [
+            "bum",
+            "auć"
+          ]
+        },
+        {
+          "name": "Our Mother The Mountain",
+          "author": "Zandt, Townes Van",
+          "image": "https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F4d26835c503c18e86c773dfccb5dc72d.500x500x1.jpg",
+          "date": 1969,
+          "tags": [
+            "country",
+            "outlaw"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "colName": "Kolekcja odizolowanych gatunków zwierząt",
+      "author": "Charles Darwin",
+      "data": [
+        {
+          "name": "Our Mother The Mountain",
+          "author": "Zandt, Townes Van",
+          "image": "https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F4d26835c503c18e86c773dfccb5dc72d.500x500x1.jpg",
+          "date": 1969,
+          "tags": [
+            "country",
+            "outlaw"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "colName": "Kolekcja gatunków z Galapagos",
+      "author": "Charles Darwin",
+      "data": [
+        {
+          "name": "Żółw słoniowy",
+          "author": "Ewolucja",
+          "image": "http://dinoanimals.pl/wp-content/uploads/2013/12/Zolw-sloniowy-Galapagos1.jpg",
+          "date": "",
+          "tags": [
+            "animal",
+            "turtle"
+          ]
+        },
+        {
+          "name": "Albatros galapagoski",
+          "author": "Ewolucja",
+          "image": "https://i.pinimg.com/originals/d1/85/fe/d185feee4028335b0b75e16878bd702d.jpg",
+          "date": "",
+          "tags": [
+            "animal",
+            "bird"
+          ]
+        },
+        {
+          "name": "Legwan galapagoski",
+          "author": "Ewolucja",
+          "image": "http://www.naturephoto-cz.com/photos/auer/legwan-galapagoski-xxximg_4291mw.jpg",
+          "date": "",
+          "tags": [
+            "animal",
+            "lizard"
+          ]
+        },
+        {
+          "name": "Uszanka galapagoska",
+          "author": "Ewolucja",
+          "image": "https://i.pinimg.com/originals/bf/67/78/bf677818e3e49d9191e47a1ec664591e.webp",
+          "date": "",
+          "tags": [
+            "animal",
+            "seal"
+          ]
+        },
+        {
+          "name": "Czapla galapagoska",
+          "author": "Ewolucja",
+          "image": "https://i.pinimg.com/originals/23/24/ea/2324ea5e7dc63fb15d46ce209ee0cb7f.jpg",
+          "date": "",
+          "tags": [
+            "animal",
+            "bird"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "colName": "Kolekcja gruzu",
+      "author": "Smiatu",
+      "data": [
+        {
+          "name": "Our Mother The Mountain",
+          "author": "Zandt, Townes Van",
+          "image": "https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F4d26835c503c18e86c773dfccb5dc72d.500x500x1.jpg",
+          "date": 1969,
+          "tags": [
+            "country",
+            "outlaw"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "colName": "Kolekcja gruzu",
+      "author": "Smiatu",
+      "data": [
+        {
+          "name": "Our Mother The Mountain",
+          "author": "Zandt, Townes Van",
+          "image": "https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F4d26835c503c18e86c773dfccb5dc72d.500x500x1.jpg",
+          "date": 1969,
+          "tags": [
+            "country",
+            "outlaw"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "colName": "Kolekcja gruzu",
+      "author": "Smiatu",
+      "data": [
+        {
+          "name": "Our Mother The Mountain",
+          "author": "Zandt, Townes Van",
+          "image": "https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F4d26835c503c18e86c773dfccb5dc72d.500x500x1.jpg",
+          "date": 1969,
+          "tags": [
+            "country",
+            "outlaw"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "colName": "Nazwa kolekcji",
+      "author": "Autor",
+      "data": [
+        {
+          "name": "2",
+          "author": "3",
+          "image": "4",
+          "date": 5,
+          "tags": [
+            "6"
+          ]
+        },
+        {
+          "name": "2",
+          "author": "3",
+          "image": "4",
+          "date": 5,
+          "tags": [
+            "6"
+          ]
+        },
+        {
+          "name": "2",
+          "author": "3",
+          "image": "4",
+          "date": 5,
+          "tags": [
+            "6"
+          ]
+        }
+      ]
+    }
   ]
 }
