@@ -1,7 +1,7 @@
 {
-  "name": "1_Przygotowanie_React",
+  "name": "Przygotowanie_React",
   "version": "1.0.0",
-  "description": "## Zadanie rozwiązywane z wykładowcą",
+  "description": "Przygotowanie działającego środowiska pod użycie React.js",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

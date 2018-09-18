@@ -7,7 +7,7 @@ import {
     Switch,
     NavLink,
 } from "react-router-dom";
-// import poniżej miał powodować scrollowanie okna do otwieranych kolekcji, niestety nie zadziałało
+// import poniżej przygotowany pod scrollowanie okna do otwieranych kolekcji
 // import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed';
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function(){
                         <p>Witam cię na stronie StuffIOWN - portalu służącemu wprowadzaniu swoich kolekcji. Możesz tutaj pochwalić się czymś, co zbierasz - czy to znaczki, czy książki, czy kolekcja płyt. Na kolejnych podstronach możesz: przejrzeć założone profile użytkowników - kolekcjonerów, a po wybraniu któregoś zobaczyć wszystkie wprowadzone przez niego kolekcje; zobaczyć pełną listę wprowadzonych kolekcji (po kliknięciu widok rozwija się i widać poszczególne przedmioty); wprowadzić swój własny zbiór poprzez formularz. Strona cały czas jest w budowie i zostało na niej bardzo dużo rzeczy do poprawy i wiele funkcjonalności do wprowadzenia, zachęcam więc aby wszystkie pomysły i uwagi przesyłać mi mailowo. Adres znajdziesz w zakładce Kontakt. Zapraszam! </p>
                         <p>Tutaj będzie już tylko gibberish po łacinie i trochę losowo wrzuconych przekleństw. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto consectetur facere id mollitia, odio quas voluptatem? Debitis deserunt ipsam laudantium natus porro. Aliquam autem beatae ducimus eaque esse    exercitationem impedit ipsam iusto nesciunt nisi numquam perferendis perspiciatis quam quia recusandae repudiandae rerum, sit suscipit ullam ut velit voluptates voluptatum!</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium blanditiis consequatur, consequuntur corporis cupiditate dignissimos dolor eaque est illo incidunt magnam magni nobis nulla officia, provident ratione sapiente vero! Aliquam animi aperiam asperiores, atque blanditiis commodi cupiditate debitis distinctio dolor dolore eaque, eligendi eos error eum explicabo impedit in incidunt ipscotusieodjebujeam minima nobis odit optio perspiciatis porro praesentium saepe sapiente ut. Enim eum fuga iste labore laborum, magnam nostrum perferendis quasi rem repudiandae sequi temporibus ut voluptas? Aspernatur, fuga, nam. Ab aliquam autem corporis, debitis delectus doloremque enim ipsum, molestiae nemo nulla pariatur perspiciatis reiciendis reprehenderit. Aliquid, provident quod.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, assumenda deleniti eius, eos eveniet facilis in ipsum modi molestias nostrum, vero voluptas voluptatibus! Consectetur id illum inventore natus           quos. Assumenda nesciunt nihil voluptanie dziala gownotem voluptatibus.sasasasas Ad aliquam dignissimos dolor eius esse explicabo fugiat fugit harum illum ipsum minus nihil obcaecati provident sed sit, soluta sunt tenetur unde ut voluptate? Ad delectus dignissimos, explicabo itaque laboriosam laborum obcaecati perferendis quos recusandae temporibus? Autem dolor earum eum explicabo magnam omnis perspiciatis praesentium voluptatem.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, assumenda deleniti eius, eos eveniet facilis in ipsum modi molestias nostrum, vero voluptas voluptatibus! Consectetur id illum inventore natus           quos. Assumenda nesciunt nihil voluptanie dziala tem voluptatibus.sasasasas Ad aliquam dignissimos dolor eius esse explicabo fugiat fugit harum illum ipsum minus nihil obcaecati provident sed sit, soluta sunt tenetur unde ut voluptate? Ad delectus dignissimos, explicabo itaque laboriosam laborum obcaecati perferendis quos recusandae temporibus? Autem dolor earum eum explicabo magnam omnis perspiciatis praesentium voluptatem.</p>
                     </article>
                     {/*articleRight jest przygotowany pod jakąś treść lub obrazek, który miałby znajdować się po prawej stronie strony głównej, póki co nic takiego nie mam, przy poprawnym przeszukiwaniu po tagach i filtrowaniu mógłby to być na przykład jakiś flowchart*/}
                     <article className="articleRight">
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 collections: [],
                 itemView: "itemListHidden",
                 colView: "colNormal",
-                // active było przygotowane pod scrollIntoView, nie zadziałało
+                // active przygotowane pod scrollIntoView
                 // active: false,
             }
         }
@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         }
 
-        // event na klik zwijajacy/rozwijajacy widok kolekcji - listy, zmieniajacy widok naglowka kolekcji, scrollIntoView nie dziala
+        // event na klik zwijajacy/rozwijajacy widok kolekcji - listy, zmieniajacy widok naglowka kolekcji, scrollIntoView poki co nie dziala
         renderCollection = (e) => {
             //console.log(e.target);
             this.setState({
@@ -332,7 +332,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 // currentUser: this.props.currentUser,
             }
         }
-        // każde okienko formularza ma swój event; event author docelowo miał automatycznie ściągać autora z propsów - zalogowanego użytkownika, póki co mnie to przerosło
+        // każde okienko formularza ma swój event; event author docelowo będzie automatycznie ściągać autora z propsów - zalogowanego użytkownika,
         handleChangeId = (e) => {
             this.setState({
                 id: this.state.existingCollections.length,
@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 author: e.target.value,
             })
         }
-        // poniższy handleClick pobiera ze state dane do stworzenia nagłówka powstającego JSONa, jest tu trochę śmieci, ale narazie strach je ruszać
+        // poniższy handleClick pobiera ze state dane do stworzenia nagłówka powstającego JSONa, jest tu trochę śmieci do usuniecia
         handleHeadClick = () => {
             //console.log("klik");
 
@@ -514,6 +514,7 @@ document.addEventListener("DOMContentLoaded", function(){
             })
         }
         // event ściąga z bazy danych właściwości name i password obiektów user. zlepia je w jednego stringa, porównuje z identycznie zlepianymi wartościami name - password pobranymi z formularza. Jeśli pary zgadzają się, zostaje zalogowany użytkownik - jego name zostaje przekazany do state.currentUser
+        // system sprawdzania hasel jest do calkowitej zmiany na bezpieczny
         handleLoginButton = () => {
             const usersMap = this.state.users.map(i => i.name + i.password);
             for(let i=0; i<usersMap.length; i++){
