@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 image: "url zdjęcia",
                 date: "data powstania",
                 tags: ["tagi"],
-                readyToSend: ``,
+                // readyToSend: ``,
                 arrToSend: [],
                 // currentUser: this.props.currentUser,
             }
@@ -353,19 +353,19 @@ document.addEventListener("DOMContentLoaded", function(){
             //console.log("klik");
 
             this.setState({
-                readyToSend: `{"id": ${this.state.id},
-                "colName": "${this.state.colName}",
-                "author": "${this.state.author}",
-                "data": [
-                    {
-                    "name": "${this.state.name}",
-                    "author": "${this.state.artist}",
-                    "image": "${this.state.image}",
-                    "date": ${this.state.date},
-                    "tags": [${this.state.tags}]
-                    }
-                ]
-            }`,
+            //     readyToSend: `{"id": ${this.state.id},
+            //     "colName": "${this.state.colName}",
+            //     "author": "${this.state.author}",
+            //     "data": [
+            //         {
+            //         "name": "${this.state.name}",
+            //         "author": "${this.state.artist}",
+            //         "image": "${this.state.image}",
+            //         "date": ${this.state.date},
+            //         "tags": [${this.state.tags}]
+            //         }
+            //     ]
+            // }`,
                 arrToSend: [`               {"id": ${this.state.id},
                 "colName": "${this.state.colName}",
                 "author": "${this.state.author}",
@@ -400,6 +400,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         // poniższy event dodaje kolejne elementy - przedmioty do powstającego JSONa
         handleAddClick = () => {
+            // const tagsFixer = this.state.tags.split("");
             const tagsFixer = "['" + this.state.tags.replace(/,/g, "', '") + "']";
             const nextItem = `
                     {
@@ -470,6 +471,9 @@ document.addEventListener("DOMContentLoaded", function(){
                     //console.log(data);
                     this.setState({
                         existingCollections: data,
+                    })
+                    this.setState({
+                        id: this.state.existingCollections.length,
                     })
                 })
                 .catch(err => {

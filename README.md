@@ -1,4 +1,4 @@
-# SIO
+## SIO
 # StuffIOWN
 
 - Strona do wprowadzania i przeglądania kolekcji. Można przejrzeć listę użytkowników, powiązane z nimi kolekcje, przedmioty w kolekcjach.
@@ -39,4 +39,10 @@
 - Wprowadzenie dłuższych opisów do headerów poszczególnych kolekcji,
 - Wprowadzenie opcji flagowania przedmiotów: przez właściciela jako do wymiany, przez innych użytkowników jako wanted,
 - Zmiana stylowania na SASS, jest przygotowany plik,
-- Przy zmianie na SASS konieczne skonfigurowanie pliku webpack.config,
+- Przy zmianie na SASS konieczne skonfigurowanie pliku webpack.config
+
+# Screenshoty
+![alt text](https://github.com/smiatu/StuffIOwn/blob/master/images/collections.jpeg "Widok strony Kolekcje")
+![alt text](https://github.com/smiatu/StuffIOwn/blob/master/images/collections_big.jpeg "Widok strony Kolekcje")
+![alt text](https://github.com/smiatu/StuffIOwn/blob/master/images/collector.jpeg "Widok podstrony kolekcjonera")
+![alt text](https://github.com/smiatu/StuffIOwn/blob/master/images/insert.jpeg "Widok formularza do wprowadzenia kolekcji")
