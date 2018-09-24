@@ -42,7 +42,7 @@
 - Przy zmianie na SASS konieczne skonfigurowanie pliku webpack.config
 
 # Screenshoty
-![alt text](https://github.com/smiatu/StuffIOwn/blob/master/images/collections.jpeg "Widok strony Kolekcje")
-![alt text](https://github.com/smiatu/StuffIOwn/blob/master/images/collections_big.jpeg "Widok strony Kolekcje")
-![alt text](https://github.com/smiatu/StuffIOwn/blob/master/images/collector.jpeg "Widok podstrony kolekcjonera")
-![alt text](https://github.com/smiatu/StuffIOwn/blob/master/images/insert.jpeg "Widok formularza do wprowadzenia kolekcji")
+![alt text](https://github.com/smiatu/StuffIOwn/blob/master/images/collections.jpg "Widok strony Kolekcje")
+![alt text](https://github.com/smiatu/StuffIOwn/blob/master/images/collections_big.jpg "Widok strony Kolekcje")
+![alt text](https://github.com/smiatu/StuffIOwn/blob/master/images/collector.jpg "Widok podstrony kolekcjonera")
+![alt text](https://github.com/smiatu/StuffIOwn/blob/master/images/insert.jpg "Widok formularza do wprowadzenia kolekcji")
