@@ -327,7 +327,6 @@ document.addEventListener("DOMContentLoaded", function(){
                 image: "url zdjęcia",
                 date: 0,
                 tags: ["tagi"],
-                // readyToSend: ``,
                 arrToSend: [],
                 arrHead: "",
                 // currentUser: this.props.currentUser,
