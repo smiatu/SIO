@@ -39,7 +39,8 @@
 - Wprowadzenie dłuższych opisów do headerów poszczególnych kolekcji,
 - Wprowadzenie opcji flagowania przedmiotów: przez właściciela jako do wymiany, przez innych użytkowników jako wanted,
 - Zmiana stylowania na SASS, jest przygotowany plik,
-- Przy zmianie na SASS konieczne skonfigurowanie pliku webpack.config
+- Przy zmianie na SASS konieczne skonfigurowanie pliku webpack.config,
+- Podział pliku app.js na pojedyncze odpowiadające komponentom
 
 # Screenshoty
 ![alt text](https://github.com/smiatu/StuffIOwn/blob/master/images/collections.jpg "Widok strony Kolekcje")

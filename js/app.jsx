@@ -325,10 +325,11 @@ document.addEventListener("DOMContentLoaded", function(){
                 name: "Nazwa przedmiotu",
                 artist: "Nazwa twórcy",
                 image: "url zdjęcia",
-                date: "data powstania",
+                date: 0,
                 tags: ["tagi"],
                 // readyToSend: ``,
                 arrToSend: [],
+                arrHead: "",
                 // currentUser: this.props.currentUser,
             }
         }
@@ -348,29 +349,14 @@ document.addEventListener("DOMContentLoaded", function(){
                 author: e.target.value,
             })
         }
-        // poniższy handleClick pobiera ze state dane do stworzenia nagłówka powstającego JSONa, jest tu trochę śmieci do usuniecia
+        // poniższy handleClick pobiera ze state dane do stworzenia nagłówka powstającego JSONa
         handleHeadClick = () => {
-            //console.log("klik");
-
             this.setState({
-            //     readyToSend: `{"id": ${this.state.id},
-            //     "colName": "${this.state.colName}",
-            //     "author": "${this.state.author}",
-            //     "data": [
-            //         {
-            //         "name": "${this.state.name}",
-            //         "author": "${this.state.artist}",
-            //         "image": "${this.state.image}",
-            //         "date": ${this.state.date},
-            //         "tags": [${this.state.tags}]
-            //         }
-            //     ]
-            // }`,
-                arrToSend: [`               {"id": ${this.state.id},
+                arrHead: `               {"id": ${this.state.id},
                 "colName": "${this.state.colName}",
                 "author": "${this.state.author}",
                 "data": [
-                    `],
+                    `,
             });
         }
         handleChangeName = (e) => {
@@ -401,7 +387,7 @@ document.addEventListener("DOMContentLoaded", function(){
         // poniższy event dodaje kolejne elementy - przedmioty do powstającego JSONa
         handleAddClick = () => {
             // const tagsFixer = this.state.tags.split("");
-            const tagsFixer = "['" + this.state.tags.replace(/,/g, "', '") + "']";
+            const tagsFixer = '["' + this.state.tags.replace(/,/g, '", "') + '"]';
             const nextItem = `
                     {
                         "name": "${this.state.name}",
@@ -424,7 +410,7 @@ document.addEventListener("DOMContentLoaded", function(){
             const closingBrackets = `]
             }`;
             const readyArr = this.state.arrToSend;
-            let readyString = readyArr.toString();
+            let readyString = this.state.arrHead + readyArr.toString();
             readyString = readyString + closingBrackets;
             //console.log(readyString);
 
@@ -442,7 +428,7 @@ document.addEventListener("DOMContentLoaded", function(){
             return (
                 <div className="collectionForm">
                     <div className="collectionHead">
-                        Id: <input type="text" value={this.state.id} onChange={this.handleChangeId}/>
+                        Id: <input type="number" value={this.state.id} onChange={this.handleChangeId}/>
                         Nazwa kolekcji: <input type="text" value={this.state.colName} onChange={this.handleChangeColName}/>
                         Kolekcjoner: <input type="text" value={this.state.author} onChange={this.handleChangeAuthor}/>
                         <button onClick={this.handleHeadClick}>Stwórz input</button>
@@ -451,13 +437,13 @@ document.addEventListener("DOMContentLoaded", function(){
                         Nazwa przedmiotu: <input type="text" value={this.state.name} onChange={this.handleChangeName}/>
                         Autor: <input type="text" value={this.state.artist} onChange={this.handleChangeArtist}/>
                         Url zdjęcia: <input type="text" value={this.state.image} onChange={this.handleChangeImage}/>
-                        Data utworzenia: <input type="text" value={this.state.date} onChange={this.handleChangeDate}/>
+                        Data utworzenia: <input type="number" value={this.state.date} onChange={this.handleChangeDate}/>
                         Tagi: <input type="text" value={this.state.tags} onChange={this.handleChangeTags}/>
                         <button onClick={this.handleAddClick}>Dodaj kolejny element</button>
                     </div>
                     <div>
                         <h3>Podgląd pliku wyjściowego:</h3>
-                        <textarea value={this.state.arrToSend} className="toSend"/>
+                        <textarea value={this.state.arrHead + this.state.arrToSend} className="toSend"/>
                         <br />
                         <button onClick={this.handleReady}>Kolekcja gotowa</button>
                     </div>
