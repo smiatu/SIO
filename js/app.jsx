@@ -9,6 +9,9 @@ import {
 } from "react-router-dom";
 // import poniżej przygotowany pod scrollowanie okna do otwieranych kolekcji
 // import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed';
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 document.addEventListener("DOMContentLoaded", function(){
 
