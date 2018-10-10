@@ -73,9 +73,6 @@ a {
     text-align: center;
     margin: 15px;
 }
-.collectorsUl li {
-
-}
 .collectors img{
     height: 200px;
     width: 200px;
@@ -164,6 +161,11 @@ a {
     display: flex;
     flex-wrap: wrap;
 }
+.collectionForm button {
+    border: 1px solid black;
+    margin: 2px 0;
+    padding: 2px;
+}
 .collectionHead {
     width: 210px;
 }
@@ -190,4 +192,8 @@ footer span {
 /* OKIENKO LOGOWANIA */
 .login {
     float: right;
+    border: 1px solid black;
+}
+.login input {
+    border: 1px solid black;
 }

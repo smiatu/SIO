@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 return (
                     <div>
                         <h1>{this.props.match.params.collector}</h1>
-                        <ul>{list}</ul>
+                        <ul className={"colUl"}>{list}</ul>
                     </div>
                 )
             } else {
@@ -322,14 +322,14 @@ document.addEventListener("DOMContentLoaded", function(){
             this.state = {
                 existingCollections: [],
                 id: 0,
-                colName: "Nazwa kolekcji",
-                author: "Autor",
+                colName: "",
+                author: "",
                 data: [],
-                name: "Nazwa przedmiotu",
-                artist: "Nazwa twórcy",
-                image: "url zdjęcia",
-                date: 0,
-                tags: ["tagi"],
+                name: "",
+                artist: "",
+                image: "",
+                date: "",
+                tags: [""],
                 arrToSend: [],
                 arrHead: "",
                 // currentUser: this.props.currentUser,
