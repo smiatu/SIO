@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import {
     HashRouter,
     Route,
-    Link,
     Switch,
     NavLink,
 } from "react-router-dom";
+import Insert from "./input";
 // import poniżej przygotowany pod scrollowanie okna do otwieranych kolekcji
 // import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed';
 // import * as Scroll from 'react-scroll';

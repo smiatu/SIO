@@ -1,7 +1,7 @@
 {
-  "name": "Przygotowanie_React",
+  "name": "STUFF_I_OWN",
   "version": "1.0.0",
-  "description": "Przygotowanie działającego środowiska pod użycie React.js",
+  "description": "Website for collectors",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
