@@ -6,7 +6,11 @@ import {
     Switch,
     NavLink,
 } from "react-router-dom";
-import Insert from "./input";
+import Insert from "./input.jsx";
+import Collectors from "./collectors.jsx";
+import Home from "./home.jsx";
+import CollectorInfo from "./collectorinfo.jsx";
+
 // import poniżej przygotowany pod scrollowanie okna do otwieranych kolekcji
 // import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed';
 // import * as Scroll from 'react-scroll';
@@ -35,192 +39,192 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
 
-    // Strona główna
-    class Home extends React.Component {
-        constructor(props){
-            super(props);
+    // // Strona główna
+    // class Home extends React.Component {
+    //     constructor(props){
+    //         super(props);
 
-            this.state={
-                currentUser: this.props.currentUser,
-            }
-        }
+    //         this.state={
+    //             currentUser: this.props.currentUser,
+    //         }
+    //     }
 
-        render(){
-            return (
-                <div>
-                    <h1>HOME</h1>
-                    <article className="articleLeft">
-                        <h2>Witamy na Stuff I OWN</h2>
-                        <p>Witam cię na stronie StuffIOWN - portalu służącemu wprowadzaniu swoich kolekcji. Możesz tutaj pochwalić się czymś, co zbierasz - czy to znaczki, czy książki, czy kolekcja płyt. Na kolejnych podstronach możesz: przejrzeć założone profile użytkowników - kolekcjonerów, a po wybraniu któregoś zobaczyć wszystkie wprowadzone przez niego kolekcje; zobaczyć pełną listę wprowadzonych kolekcji (po kliknięciu widok rozwija się i widać poszczególne przedmioty); wprowadzić swój własny zbiór poprzez formularz. Strona cały czas jest w budowie i zostało na niej bardzo dużo rzeczy do poprawy i wiele funkcjonalności do wprowadzenia, zachęcam więc aby wszystkie pomysły i uwagi przesyłać mi mailowo. Adres znajdziesz w zakładce Kontakt. Zapraszam! </p>
-                        <p>Tutaj będzie już tylko gibberish po łacinie i trochę losowo wrzuconych przekleństw. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto consectetur facere id mollitia, odio quas voluptatem? Debitis deserunt ipsam laudantium natus porro. Aliquam autem beatae ducimus eaque esse    exercitationem impedit ipsam iusto nesciunt nisi numquam perferendis perspiciatis quam quia recusandae repudiandae rerum, sit suscipit ullam ut velit voluptates voluptatum!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium blanditiis consequatur, consequuntur corporis cupiditate dignissimos dolor eaque est illo incidunt magnam magni nobis nulla officia, provident ratione sapiente vero! Aliquam animi aperiam asperiores, atque blanditiis commodi cupiditate debitis distinctio dolor dolore eaque, eligendi eos error eum explicabo impedit in incidunt ipscotusieodjebujeam minima nobis odit optio perspiciatis porro praesentium saepe sapiente ut. Enim eum fuga iste labore laborum, magnam nostrum perferendis quasi rem repudiandae sequi temporibus ut voluptas? Aspernatur, fuga, nam. Ab aliquam autem corporis, debitis delectus doloremque enim ipsum, molestiae nemo nulla pariatur perspiciatis reiciendis reprehenderit. Aliquid, provident quod.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, assumenda deleniti eius, eos eveniet facilis in ipsum modi molestias nostrum, vero voluptas voluptatibus! Consectetur id illum inventore natus           quos. Assumenda nesciunt nihil voluptanie dziala tem voluptatibus.sasasasas Ad aliquam dignissimos dolor eius esse explicabo fugiat fugit harum illum ipsum minus nihil obcaecati provident sed sit, soluta sunt tenetur unde ut voluptate? Ad delectus dignissimos, explicabo itaque laboriosam laborum obcaecati perferendis quos recusandae temporibus? Autem dolor earum eum explicabo magnam omnis perspiciatis praesentium voluptatem.</p>
-                    </article>
-                    {/*articleRight jest przygotowany pod jakąś treść lub obrazek, który miałby znajdować się po prawej stronie strony głównej, póki co nic takiego nie mam, przy poprawnym przeszukiwaniu po tagach i filtrowaniu mógłby to być na przykład jakiś flowchart*/}
-                    <article className="articleRight">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, temporibus?</p>
-                    </article>
-                </div>
-            )
-        }
-    }
+    //     render(){
+    //         return (
+    //             <div>
+    //                 <h1>HOME</h1>
+    //                 <article className="articleLeft">
+    //                     <h2>Witamy na Stuff I OWN</h2>
+    //                     <p>Witam cię na stronie StuffIOWN - portalu służącemu wprowadzaniu swoich kolekcji. Możesz tutaj pochwalić się czymś, co zbierasz - czy to znaczki, czy książki, czy kolekcja płyt. Na kolejnych podstronach możesz: przejrzeć założone profile użytkowników - kolekcjonerów, a po wybraniu któregoś zobaczyć wszystkie wprowadzone przez niego kolekcje; zobaczyć pełną listę wprowadzonych kolekcji (po kliknięciu widok rozwija się i widać poszczególne przedmioty); wprowadzić swój własny zbiór poprzez formularz. Strona cały czas jest w budowie i zostało na niej bardzo dużo rzeczy do poprawy i wiele funkcjonalności do wprowadzenia, zachęcam więc aby wszystkie pomysły i uwagi przesyłać mi mailowo. Adres znajdziesz w zakładce Kontakt. Zapraszam! </p>
+    //                     <p>Tutaj będzie już tylko gibberish po łacinie i trochę losowo wrzuconych przekleństw. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto consectetur facere id mollitia, odio quas voluptatem? Debitis deserunt ipsam laudantium natus porro. Aliquam autem beatae ducimus eaque esse    exercitationem impedit ipsam iusto nesciunt nisi numquam perferendis perspiciatis quam quia recusandae repudiandae rerum, sit suscipit ullam ut velit voluptates voluptatum!</p>
+    //                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium blanditiis consequatur, consequuntur corporis cupiditate dignissimos dolor eaque est illo incidunt magnam magni nobis nulla officia, provident ratione sapiente vero! Aliquam animi aperiam asperiores, atque blanditiis commodi cupiditate debitis distinctio dolor dolore eaque, eligendi eos error eum explicabo impedit in incidunt ipscotusieodjebujeam minima nobis odit optio perspiciatis porro praesentium saepe sapiente ut. Enim eum fuga iste labore laborum, magnam nostrum perferendis quasi rem repudiandae sequi temporibus ut voluptas? Aspernatur, fuga, nam. Ab aliquam autem corporis, debitis delectus doloremque enim ipsum, molestiae nemo nulla pariatur perspiciatis reiciendis reprehenderit. Aliquid, provident quod.</p>
+    //                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, assumenda deleniti eius, eos eveniet facilis in ipsum modi molestias nostrum, vero voluptas voluptatibus! Consectetur id illum inventore natus           quos. Assumenda nesciunt nihil voluptanie dziala tem voluptatibus.sasasasas Ad aliquam dignissimos dolor eius esse explicabo fugiat fugit harum illum ipsum minus nihil obcaecati provident sed sit, soluta sunt tenetur unde ut voluptate? Ad delectus dignissimos, explicabo itaque laboriosam laborum obcaecati perferendis quos recusandae temporibus? Autem dolor earum eum explicabo magnam omnis perspiciatis praesentium voluptatem.</p>
+    //                 </article>
+    //                 {/*articleRight jest przygotowany pod jakąś treść lub obrazek, który miałby znajdować się po prawej stronie strony głównej, póki co nic takiego nie mam, przy poprawnym przeszukiwaniu po tagach i filtrowaniu mógłby to być na przykład jakiś flowchart*/}
+    //                 <article className="articleRight">
+    //                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, temporibus?</p>
+    //                 </article>
+    //             </div>
+    //         )
+    //     }
+    // }
 
     // podstrona Kolekcjonerzy
-    class Collectors extends React.Component {
-        constructor(props){
-            super(props);
+    // class Collectors extends React.Component {
+    //     constructor(props){
+    //         super(props);
 
-            this.state = {
-                users: [],
-            }
-        }
+    //         this.state = {
+    //             users: [],
+    //         }
+    //     }
 
-        render(){
-            // console.log(this.state.users);
-            //informacja do pojawienia się przed wczytaniem danych z bazy, lub przy problemach z bazą danych
-            if(this.state.users == false){
-                return <h1>Proszę czekać, wczytuję listę kolekcjonerów...</h1>
-            }
-            //to jest render właściwej listy, każdy element jest przy okazji linkiem kierującym na podstronę o nim samym
-            const list = this.state.users.map( i =>
-                <li key={i.id} className={"collectors"}>
-                    <NavLink to={"collectors/"+i.name}>
-                        <img src={i.avatar} />
-                        <h3>{i.name}</h3>
-                        <p>{i.description}</p>
-                    </NavLink>
-                </li>)
-            return (
-                <div>
-                    <h1>KOLEKCJONERZY</h1>
-                    <ul className={"collectorsUl"}>{list}</ul>
-                </div>
-            )
-        }
-        componentDidMount(){
-            fetch("http://localhost:3000/users")
-                .then(resp => resp.json())
-                .then(data => {
-                    //console.log(data);
-                    this.setState({
-                        users: data,
-                    })
-                })
-                .catch(err => {
-                    console.log(err);
-                })
-        }
-    }
+    //     render(){
+    //         // console.log(this.state.users);
+    //         //informacja do pojawienia się przed wczytaniem danych z bazy, lub przy problemach z bazą danych
+    //         if(this.state.users == false){
+    //             return <h1>Proszę czekać, wczytuję listę kolekcjonerów...</h1>
+    //         }
+    //         //to jest render właściwej listy, każdy element jest przy okazji linkiem kierującym na podstronę o nim samym
+    //         const list = this.state.users.map( i =>
+    //             <li key={i.id} className={"collectors"}>
+    //                 <NavLink to={"collectors/"+i.name}>
+    //                     <img src={i.avatar} />
+    //                     <h3>{i.name}</h3>
+    //                     <p>{i.description}</p>
+    //                 </NavLink>
+    //             </li>)
+    //         return (
+    //             <div>
+    //                 <h1>KOLEKCJONERZY</h1>
+    //                 <ul className={"collectorsUl"}>{list}</ul>
+    //             </div>
+    //         )
+    //     }
+    //     componentDidMount(){
+    //         fetch("http://localhost:3000/users")
+    //             .then(resp => resp.json())
+    //             .then(data => {
+    //                 //console.log(data);
+    //                 this.setState({
+    //                     users: data,
+    //                 })
+    //             })
+    //             .catch(err => {
+    //                 console.log(err);
+    //             })
+    //     }
+    // }
 
-    // podstrona o konkretnych kolekcjonerach
-    class CollectorInfo extends React.Component {
-        constructor(props){
-            super(props);
+    // // podstrona o konkretnych kolekcjonerach
+    // class CollectorInfo extends React.Component {
+    //     constructor(props){
+    //         super(props);
 
-            this.state={
-                users: [],
-                usersNames: [],
-                collections: [],
-                itemView: "itemListHidden",
-                colView: "colNormal",
-                // active przygotowane pod scrollIntoView
-                // active: false,
-            }
-        }
-        render(){
-            // przygotowane pod scrollIntoView
-            // const { active } = this.state;
-            // sprawdza czy nazwa użytkownika podana w adresie url znajduje się w obiekcie w bazie
-            if(this.state.users == false){
-                return <h1>Proszę czekać, sprawdzam poprawność...</h1>
-            }
+    //         this.state={
+    //             users: [],
+    //             usersNames: [],
+    //             collections: [],
+    //             itemView: "itemListHidden",
+    //             colView: "colNormal",
+    //             // active przygotowane pod scrollIntoView
+    //             // active: false,
+    //         }
+    //     }
+    //     render(){
+    //         // przygotowane pod scrollIntoView
+    //         // const { active } = this.state;
+    //         // sprawdza czy nazwa użytkownika podana w adresie url znajduje się w obiekcie w bazie
+    //         if(this.state.users == false){
+    //             return <h1>Proszę czekać, sprawdzam poprawność...</h1>
+    //         }
 
-            // to tutaj dzieje się magia - sprawdzamy indeks konkretnego użytkownika w this.state.usersnames, ktore mamy sciagniete na poziomie fetch, po czym sprawdzamy po nazwie czy pokrywa sie z podanym autorem ktorejkolwiek z kolekcji, jesli tak, to zwracamy kolekcję w formie listy
-            if(this.state.usersNames.indexOf(this.props.match.params.collector) != -1){
-                const thisUserCollections = [];
-                for(let i=0; i<this.state.collections.length; i++){
-                    //console.log(this.state.collections[i].author);
-                    if(this.props.match.params.collector == this.state.collections[i].author){
-                        //console.log(this.state.collections[i]);
-                        thisUserCollections.push(this.state.collections[i]);
-                    }
-                }
-                // tutaj render do powyzszego pieknego ifa w forze w ifie
-                const list = thisUserCollections.map( i =>
-                    <li key={i.id} className={this.state.colView} onClick={this.renderCollection}>
-                        <div onClick={this.renderCollection} className={"fullCol", "colBasic"}>
-                            <div>
-                                <h3>{i.colName}</h3>
-                                <p>Właściciel: {i.author}</p>
-                            </div>
-                            <ul className={this.state.itemView}>
-                                {i.data.map(j =>
-                                    <li>
-                                        <img src={j.image} />
-                                        <br />
-                                        {j.author}
-                                        <br />
-                                        {j.name}
-                                        <br />
-                                        {j.date}
-                                    </li>)}
-                            </ul>
-                        </div>
-                    </li>
-                )
-                return (
-                    <div>
-                        <h1>{this.props.match.params.collector}</h1>
-                        <ul className={"colUl"}>{list}</ul>
-                    </div>
-                )
-            } else {
-                return (
-                    <div>
-                        <h1>Użytkownik nie został znaleziony</h1>
-                    </div>
-                )
-            }
+    //         // to tutaj dzieje się magia - sprawdzamy indeks konkretnego użytkownika w this.state.usersnames, ktore mamy sciagniete na poziomie fetch, po czym sprawdzamy po nazwie czy pokrywa sie z podanym autorem ktorejkolwiek z kolekcji, jesli tak, to zwracamy kolekcję w formie listy
+    //         if(this.state.usersNames.indexOf(this.props.match.params.collector) != -1){
+    //             const thisUserCollections = [];
+    //             for(let i=0; i<this.state.collections.length; i++){
+    //                 //console.log(this.state.collections[i].author);
+    //                 if(this.props.match.params.collector == this.state.collections[i].author){
+    //                     //console.log(this.state.collections[i]);
+    //                     thisUserCollections.push(this.state.collections[i]);
+    //                 }
+    //             }
+    //             // tutaj render do powyzszego pieknego ifa w forze w ifie
+    //             const list = thisUserCollections.map( i =>
+    //                 <li key={i.id} className={this.state.colView} onClick={this.renderCollection}>
+    //                     <div onClick={this.renderCollection} className={"fullCol", "colBasic"}>
+    //                         <div>
+    //                             <h3>{i.colName}</h3>
+    //                             <p>Właściciel: {i.author}</p>
+    //                         </div>
+    //                         <ul className={this.state.itemView}>
+    //                             {i.data.map(j =>
+    //                                 <li>
+    //                                     <img src={j.image} />
+    //                                     <br />
+    //                                     {j.author}
+    //                                     <br />
+    //                                     {j.name}
+    //                                     <br />
+    //                                     {j.date}
+    //                                 </li>)}
+    //                         </ul>
+    //                     </div>
+    //                 </li>
+    //             )
+    //             return (
+    //                 <div>
+    //                     <h1>{this.props.match.params.collector}</h1>
+    //                     <ul className={"colUl"}>{list}</ul>
+    //                 </div>
+    //             )
+    //         } else {
+    //             return (
+    //                 <div>
+    //                     <h1>Użytkownik nie został znaleziony</h1>
+    //                 </div>
+    //             )
+    //         }
 
-        }
+    //     }
 
-        // event, ktory zmienia widok: po kliknieciu kolekcja staje sie widoczna/niewidoczna, a kafelkowa reprezentacja jej naglowka rozwija sie lub zwija; active przygotowane pod scrollIntoView
-        renderCollection = (e) => {
-            //console.log(e.target);
-            this.setState({
-                itemView: this.state.itemView == "itemList" ? "itemListHidden" : "itemList",
-                colView: this.state.colView == "colNormal" ? "colBig" : "colNormal",
-                // active: !this.state.active,
-            })
-        }
+    //     // event, ktory zmienia widok: po kliknieciu kolekcja staje sie widoczna/niewidoczna, a kafelkowa reprezentacja jej naglowka rozwija sie lub zwija; active przygotowane pod scrollIntoView
+    //     renderCollection = (e) => {
+    //         //console.log(e.target);
+    //         this.setState({
+    //             itemView: this.state.itemView == "itemList" ? "itemListHidden" : "itemList",
+    //             colView: this.state.colView == "colNormal" ? "colBig" : "colNormal",
+    //             // active: !this.state.active,
+    //         })
+    //     }
 
-        componentDidMount(){
-            fetch("http://localhost:3000/users")
-                .then(resp => resp.json())
-                .then(data => {
-                    const usersNamesList = data.map(q => q.name);
-                    this.setState({
-                        users: data,
-                        usersNames: usersNamesList,
-                    })
-                })
-                .catch(err => {
-                    console.log(err);
-                })
-            fetch("http://localhost:3000/collections")
-                .then(resp => resp.json())
-                .then(data => {
-                    //console.log(data);
-                    this.setState({
-                        collections: data,
-                    })
-                })
-                .catch(err => {
-                    console.log(err);
-                })
+    //     componentDidMount(){
+    //         fetch("http://localhost:3000/users")
+    //             .then(resp => resp.json())
+    //             .then(data => {
+    //                 const usersNamesList = data.map(q => q.name);
+    //                 this.setState({
+    //                     users: data,
+    //                     usersNames: usersNamesList,
+    //                 })
+    //             })
+    //             .catch(err => {
+    //                 console.log(err);
+    //             })
+    //         fetch("http://localhost:3000/collections")
+    //             .then(resp => resp.json())
+    //             .then(data => {
+    //                 //console.log(data);
+    //                 this.setState({
+    //                     collections: data,
+    //                 })
+    //             })
+    //             .catch(err => {
+    //                 console.log(err);
+    //             })
 
-        }
-    }
+    //     }
+    // }
 
     // podstrona Kolekcje
     class Collections extends React.Component {

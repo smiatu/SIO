@@ -1,11 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import {
-    HashRouter,
-    Route,
-    Switch,
-    NavLink,
-} from "react-router-dom";
 
 class Insert extends React.Component {
     constructor(props){
